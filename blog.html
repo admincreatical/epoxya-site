@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Epoxya | Conseils & Inspirations Sol Époxy Belgique</title>
+  <meta name="description" content="Conseils, tendances et inspirations sur les sols en résine époxy. Guides pratiques pour votre projet en Belgique." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://epoxya.be/blog" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --accent: #00e5cc;
+      --accent-rgb: 0, 229, 204;
+      --accent-light: #33ffee;
+      --bg: #0a0a0a;
+      --bg2: #0f1115;
+      --text-primary: #f0f0f0;
+      --text-secondary: #888;
+      --glass-bg: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.07);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: 'Archivo', sans-serif;
+      overflow-x: hidden;
+    }
+    ::selection { background: var(--accent); color: #000; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #111; }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #00e5cc, #007a6e); border-radius: 3px; }
+
+    /* ─── Navbar ─── */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto; padding: 16px 40px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-right { display: flex; align-items: center; gap: 24px; }
+    .nav-phone {
+      display: flex; align-items: center; gap: 8px;
+      color: var(--text-primary); text-decoration: none;
+      font-size: 0.9rem; font-weight: 500;
+    }
+    .nav-phone svg { width: 18px; height: 18px; }
+    .nav-blog {
+      color: var(--accent); text-decoration: none;
+      font-size: 0.9rem; font-weight: 600;
+    }
+    .nav-cta {
+      color: var(--bg); background: var(--accent);
+      padding: 10px 24px; border-radius: 8px;
+      font-weight: 600; font-size: 0.85rem;
+      text-decoration: none;
+      transition: box-shadow 0.25s ease, transform 0.2s ease;
+    }
+    .nav-cta:hover { box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.45); transform: translateY(-1px); }
+
+    /* ─── Blog Hero ─── */
+    .blog-hero {
+      padding: 140px 32px 60px; text-align: center;
+      background: linear-gradient(180deg, var(--bg) 0%, rgba(0,229,204,0.04) 100%);
+    }
+    .blog-hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700; margin-bottom: 12px;
+    }
+    .blog-hero p { color: var(--text-secondary); font-size: 1.05rem; max-width: 500px; margin: 0 auto; }
+
+    /* ─── Category Filter ─── */
+    .blog-filters {
+      display: flex; gap: 12px; justify-content: center;
+      padding: 0 32px 40px; flex-wrap: wrap;
+    }
+    .filter-btn {
+      background: var(--glass-bg); border: 1px solid var(--glass-border);
+      border-radius: 100px; padding: 8px 20px;
+      color: var(--text-secondary); font-size: 0.85rem;
+      cursor: pointer; transition: all 0.2s;
+      font-family: 'Archivo', sans-serif;
+    }
+    .filter-btn:hover { border-color: rgba(var(--accent-rgb), 0.3); color: var(--text-primary); }
+    .filter-btn.active {
+      background: rgba(var(--accent-rgb), 0.1);
+      border-color: var(--accent); color: var(--accent); font-weight: 600;
+    }
+
+    /* ─── Articles Grid ─── */
+    .blog-grid {
+      max-width: 1100px; margin: 0 auto; padding: 0 32px 80px;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+    }
+    .article-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px; overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s;
+      text-decoration: none; color: inherit;
+      display: flex; flex-direction: column;
+    }
+    .article-card:hover { transform: translateY(-5px); border-color: rgba(var(--accent-rgb), 0.25); }
+    .article-card-img {
+      width: 100%; height: 200px; object-fit: cover; display: block;
+    }
+    .article-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+    .article-card-meta {
+      display: flex; gap: 12px; align-items: center; margin-bottom: 12px;
+    }
+    .article-category {
+      background: rgba(var(--accent-rgb), 0.1);
+      border: 1px solid rgba(var(--accent-rgb), 0.2);
+      border-radius: 6px; padding: 3px 10px;
+      font-size: 0.72rem; font-weight: 600; color: var(--accent);
+      font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .article-date { font-size: 0.78rem; color: var(--text-secondary); }
+    .article-card h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem; font-weight: 600; margin-bottom: 10px; line-height: 1.3;
+    }
+    .article-card p {
+      font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; flex: 1;
+    }
+    .article-read {
+      margin-top: 16px; font-size: 0.82rem; color: var(--accent);
+      font-weight: 600; display: flex; align-items: center; gap: 6px;
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      background: var(--bg); border-top: 1px solid var(--glass-border);
+      padding: 48px 32px 28px;
+    }
+    .footer-simple {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-simple a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .footer-simple a:hover { color: var(--accent); }
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 1024px) {
+      .blog-grid { grid-template-columns: repeat(2, 1fr); }
+      .nav-inner { padding: 14px 24px; }
+    }
+    @media (max-width: 768px) {
+      .blog-grid { grid-template-columns: 1fr; padding: 0 16px 60px; }
+      .nav-phone { display: none; }
+      .nav-inner { padding: 12px 16px; }
+      .nav-logo img { height: 28px; }
+      .nav-right { gap: 14px; }
+      .nav-cta { padding: 8px 16px; font-size: 0.78rem; }
+      .nav-blog { font-size: 0.82rem; }
+      .blog-hero { padding: 120px 16px 40px; }
+      .blog-hero h1 { font-size: 1.8rem; }
+      .blog-hero p { font-size: 0.9rem; }
+      .blog-filters { padding: 0 16px 28px; }
+      .article-card-img { height: 180px; }
+      .footer-simple { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.webp" alt="Epoxya" />
+      </a>
+      <div class="nav-right">
+        <a href="tel:+32486804357" class="nav-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +32 486 804 357
+        </a>
+        <a href="blog.html" class="nav-blog">Blog</a>
+        <a href="index.html#devis" class="nav-cta">Devis gratuit</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Blog Hero -->
+  <div class="blog-hero">
+    <h1>Blog Epoxya</h1>
+    <p>Conseils, tendances et inspirations pour vos projets de sols époxy en Belgique</p>
+  </div>
+
+  <!-- Filters -->
+  <div class="blog-filters">
+    <button class="filter-btn active" data-filter="all">Tous</button>
+    <button class="filter-btn" data-filter="Conseils">Conseils</button>
+    <button class="filter-btn" data-filter="Inspirations">Inspirations</button>
+  </div>
+
+  <!-- Articles Grid -->
+  <div class="blog-grid" id="blogGrid"></div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-simple">
+      <span class="footer-copy">&copy; 2026 Epoxya. Tous droits réservés.</span>
+      <div style="display:flex;gap:20px;">
+        <a href="index.html">Accueil</a>
+        <a href="index.html#devis">Devis gratuit</a>
+        <a href="index.html#tarifs">Tarifs</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* Load articles from JSON */
+    const grid = document.getElementById('blogGrid');
+    let allArticles = [];
+
+    fetch('blog/articles.json')
+      .then(r => r.json())
+      .then(articles => {
+        allArticles = articles;
+        renderArticles(articles);
+      })
+      .catch(() => {
+        grid.innerHTML = '<p style="text-align:center;color:var(--text-secondary);grid-column:1/-1;padding:60px 0;">Aucun article pour le moment. Revenez bientôt !</p>';
+      });
+
+    function renderArticles(articles) {
+      grid.innerHTML = '';
+      if (articles.length === 0) {
+        grid.innerHTML = '<p style="text-align:center;color:var(--text-secondary);grid-column:1/-1;padding:60px 0;">Aucun article dans cette catégorie.</p>';
+        return;
+      }
+      articles.forEach(a => {
+        const card = document.createElement('a');
+        card.className = 'article-card';
+        card.href = `article.html?slug=${a.slug}`;
+        card.innerHTML = `
+          <img src="${a.image}" alt="${a.title}" class="article-card-img" />
+          <div class="article-card-body">
+            <div class="article-card-meta">
+              <span class="article-category">${a.category}</span>
+              <span class="article-date">${formatDate(a.date)}</span>
+            </div>
+            <h2>${a.title}</h2>
+            <p>${a.excerpt}</p>
+            <span class="article-read">Lire l'article &rarr;</span>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function formatDate(dateStr) {
+      const d = new Date(dateStr);
+      return d.toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric' });
+    }
+
+    /* Category filter */
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        if (filter === 'all') {
+          renderArticles(allArticles);
+        } else {
+          renderArticles(allArticles.filter(a => a.category === filter));
+        }
+      });
+    });
+  </script>
+</body>
+</html>

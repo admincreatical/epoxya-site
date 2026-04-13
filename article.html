@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="pageTitle">Article — Epoxya Blog</title>
+  <meta name="description" id="pageMeta" content="" />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --accent: #00e5cc;
+      --accent-rgb: 0, 229, 204;
+      --bg: #0a0a0a;
+      --bg2: #0f1115;
+      --text-primary: #f0f0f0;
+      --text-secondary: #888;
+      --glass-bg: rgba(255,255,255,0.03);
+      --glass-border: rgba(255,255,255,0.07);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--text-primary);
+      font-family: 'Archivo', sans-serif; overflow-x: hidden;
+    }
+    ::selection { background: var(--accent); color: #000; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #111; }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #00e5cc, #007a6e); border-radius: 3px; }
+
+    /* Navbar */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto; padding: 16px 40px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo img { height: 36px; }
+    .nav-right { display: flex; align-items: center; gap: 24px; }
+    .nav-blog { color: var(--accent); text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+    .nav-cta {
+      color: var(--bg); background: var(--accent);
+      padding: 10px 24px; border-radius: 8px;
+      font-weight: 600; font-size: 0.85rem; text-decoration: none;
+      transition: box-shadow 0.25s, transform 0.2s;
+    }
+    .nav-cta:hover { box-shadow: 0 0 20px rgba(var(--accent-rgb),0.45); transform: translateY(-1px); }
+
+    /* Article */
+    .article-hero {
+      width: 100%; max-height: 450px; object-fit: cover; display: block;
+      margin-top: 68px;
+    }
+    .article-container {
+      max-width: 760px; margin: 0 auto; padding: 48px 32px 80px;
+    }
+    .article-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--text-secondary); text-decoration: none;
+      font-size: 0.85rem; margin-bottom: 32px; transition: color 0.2s;
+    }
+    .article-back:hover { color: var(--accent); }
+    .article-meta {
+      display: flex; gap: 16px; align-items: center; margin-bottom: 20px;
+    }
+    .article-category-tag {
+      background: rgba(var(--accent-rgb), 0.1);
+      border: 1px solid rgba(var(--accent-rgb), 0.2);
+      border-radius: 6px; padding: 4px 12px;
+      font-size: 0.72rem; font-weight: 600; color: var(--accent);
+      font-family: 'JetBrains Mono', monospace; text-transform: uppercase;
+    }
+    .article-date-tag { font-size: 0.82rem; color: var(--text-secondary); }
+    .article-read-tag { font-size: 0.82rem; color: var(--text-secondary); }
+    .article-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700; line-height: 1.15;
+      margin-bottom: 36px; letter-spacing: -0.02em;
+    }
+
+    /* Article Content */
+    .article-content { line-height: 1.8; font-size: 1.02rem; }
+    .article-content h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem; font-weight: 700;
+      margin: 40px 0 16px; color: var(--text-primary);
+    }
+    .article-content h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem; font-weight: 600;
+      margin: 32px 0 12px;
+    }
+    .article-content p { color: var(--text-secondary); margin-bottom: 20px; }
+    .article-content ul, .article-content ol {
+      color: var(--text-secondary); margin: 0 0 20px 24px;
+    }
+    .article-content li { margin-bottom: 8px; }
+    .article-content strong { color: var(--text-primary); }
+
+    /* CTA Box */
+    .article-cta {
+      margin-top: 48px; padding: 40px;
+      background: rgba(var(--accent-rgb), 0.05);
+      border: 1px solid rgba(var(--accent-rgb), 0.15);
+      border-radius: 20px; text-align: center;
+    }
+    .article-cta h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.3rem; font-weight: 700; margin-bottom: 12px;
+    }
+    .article-cta p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 24px; }
+    .article-cta a {
+      background: var(--accent); color: #000;
+      padding: 14px 36px; border-radius: 12px;
+      font-weight: 700; font-size: 0.95rem;
+      text-decoration: none; display: inline-block;
+      transition: box-shadow 0.3s;
+    }
+    .article-cta a:hover { box-shadow: 0 0 30px rgba(var(--accent-rgb), 0.4); }
+
+    /* Footer */
+    footer {
+      background: var(--bg); border-top: 1px solid var(--glass-border);
+      padding: 48px 32px 28px;
+    }
+    .footer-simple {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-simple a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .footer-simple a:hover { color: var(--accent); }
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
+
+    /* Loading */
+    .article-loading {
+      text-align: center; padding: 120px 32px;
+      color: var(--text-secondary); font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-inner { padding: 12px 16px; }
+      .nav-logo img { height: 28px; }
+      .nav-right { gap: 14px; }
+      .nav-cta { padding: 8px 16px; font-size: 0.78rem; }
+      .nav-blog { font-size: 0.82rem; }
+      .article-hero { max-height: 280px; }
+      .article-container { padding: 28px 16px 60px; }
+      .article-title { font-size: 1.5rem; }
+      .article-content h2 { font-size: 1.2rem; }
+      .article-content { font-size: 0.95rem; }
+      .article-cta { padding: 28px 20px; }
+      .article-cta h3 { font-size: 1.1rem; }
+      .article-meta { flex-wrap: wrap; gap: 10px; }
+      .footer-simple { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="logo.webp" alt="Epoxya" /></a>
+      <div class="nav-right">
+        <a href="blog.html" class="nav-blog">Blog</a>
+        <a href="index.html#devis" class="nav-cta">Devis gratuit</a>
+      </div>
+    </div>
+  </nav>
+
+  <img src="" alt="" class="article-hero" id="articleHero" style="display:none;" />
+
+  <div class="article-container" id="articleContainer">
+    <div class="article-loading" id="articleLoading">Chargement de l'article...</div>
+  </div>
+
+  <footer>
+    <div class="footer-simple">
+      <span class="footer-copy">&copy; 2026 Epoxya. Tous droits réservés.</span>
+      <div style="display:flex;gap:20px;">
+        <a href="index.html">Accueil</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#devis">Devis gratuit</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const slug = new URLSearchParams(window.location.search).get('slug');
+    const container = document.getElementById('articleContainer');
+    const loading = document.getElementById('articleLoading');
+    const hero = document.getElementById('articleHero');
+
+    if (!slug) {
+      window.location.href = 'blog.html';
+    } else {
+      fetch(`blog/articles/${slug}.json`)
+        .then(r => { if (!r.ok) throw new Error(); return r.json(); })
+        .then(article => {
+          document.getElementById('pageTitle').textContent = article.title + ' — Epoxya Blog';
+          document.getElementById('pageMeta').content = article.content.replace(/<[^>]+>/g, '').substring(0, 160);
+
+          hero.src = article.image;
+          hero.alt = article.title;
+          hero.style.display = 'block';
+
+          const date = new Date(article.date).toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric' });
+
+          container.innerHTML = `
+            <a href="blog.html" class="article-back">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+              Retour au blog
+            </a>
+            <div class="article-meta">
+              <span class="article-category-tag">${article.category}</span>
+              <span class="article-date-tag">${date}</span>
+              <span class="article-read-tag">${article.readTime} de lecture</span>
+            </div>
+            <h1 class="article-title">${article.title}</h1>
+            <div class="article-content">${article.content}</div>
+            <div class="article-cta">
+              <h3>Un projet en tête ?</h3>
+              <p>Demandez votre devis gratuit et recevez une réponse sous 24 heures.</p>
+              <a href="index.html#devis">Demander un devis gratuit</a>
+            </div>
+          `;
+        })
+        .catch(() => {
+          container.innerHTML = `
+            <div class="article-loading">
+              <p>Article introuvable.</p>
+              <a href="blog.html" style="color:var(--accent);text-decoration:none;margin-top:16px;display:inline-block;">Retour au blog</a>
+            </div>
+          `;
+        });
+    }
+  </script>
+</body>
+</html>

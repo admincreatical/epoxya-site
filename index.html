@@ -1,0 +1,2512 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Epoxya — Pose Sol Époxy & Résine Belgique, Bruxelles, Liège | Devis Gratuit</title>
+  <meta name="description" content="Epoxya, spécialiste de la pose de sols en résine époxy en Belgique. Garage, showroom, entrepôt. Partenaire Chemtec certifié. Devis gratuit sous 24h." />
+  <meta name="keywords" content="sol époxy, résine époxy, pose résine époxy Bruxelles, sol époxy Liège, sol résine Belgique, revêtement époxy garage, sol époxy industriel, sol époxy commercial, Chemtec, Epoxya" />
+  <meta name="author" content="Epoxya" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://epoxya.be/" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#00e5cc" />
+  <link rel="preload" as="image" href="frames/frame_0001.webp" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Epoxya — Sols Époxy Premium Belgique" />
+  <meta property="og:description" content="Des sols ultra-résistants qui subliment vos espaces. Partenaire officiel Chemtec. Devis gratuit sous 24h." />
+  <meta property="og:url" content="https://epoxya.be/" />
+  <meta property="og:site_name" content="Epoxya" />
+  <meta property="og:locale" content="fr_BE" />
+  <meta property="og:image" content="https://epoxya.be/og-image.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Epoxya — Sols Époxy Premium Belgique" />
+  <meta name="twitter:description" content="Pose de sols en résine époxy en Belgique. Devis gratuit sous 24h." />
+
+  <!-- Schema.org / JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Epoxya",
+    "description": "Spécialiste de la pose de sols en résine époxy en Belgique. Partenaire officiel Chemtec.",
+    "url": "https://epoxya.be",
+    "telephone": "+32486804357",
+    "email": "info@epoxya.be",
+    "areaServed": [
+      { "@type": "Country", "name": "Belgium" },
+      { "@type": "City", "name": "Bruxelles" },
+      { "@type": "City", "name": "Liège" },
+      { "@type": "City", "name": "Charleroi" }
+    ],
+    "serviceType": ["Pose de sol époxy", "Résine époxy", "Revêtement de sol industriel", "Sol époxy garage", "Sol époxy commercial"],
+    "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "37",
+      "bestRating": "5"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Sols époxy",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sol époxy résidentiel" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sol époxy commercial" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sol époxy industriel" } }
+      ]
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+:root {
+      --accent: #00e5cc;
+      --accent-rgb: 0, 229, 204;
+      --accent-light: #33ffee;
+      --bg: #0a0a0a;
+      --bg2: #0f1115;
+      --text-primary: #f0f0f0;
+      --text-secondary: #888;
+      --glass-bg: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.07);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: 'Archivo', sans-serif;
+      overflow-x: hidden;
+    }
+
+    ::selection { background: var(--accent); color: #000; }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #111; }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #00e5cc, #007a6e); border-radius: 3px; }
+
+    /* ─── Scroll Progress ─── */
+    #scrollProgress {
+      position: fixed; top: 0; left: 0;
+      height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--accent), var(--accent-light));
+      z-index: 10000;
+      transition: width 0.1s linear;
+    }
+
+    /* ─── Loader ─── */
+    #loader {
+      position: fixed; inset: 0;
+      background: var(--bg);
+      z-index: 9999;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 28px;
+      transition: opacity 0.7s ease;
+    }
+    .loader-logo { width: 140px; opacity: 0.95; }
+    .loader-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem; letter-spacing: 4px;
+      text-transform: uppercase; color: var(--text-secondary);
+    }
+    .loader-bar-track {
+      width: 200px; height: 2px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 2px; overflow: hidden;
+    }
+    .loader-bar-fill {
+      height: 100%; width: 0%;
+      background: linear-gradient(90deg, var(--accent), var(--accent-light));
+      border-radius: 2px; transition: width 0.25s ease;
+      box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.6);
+    }
+    .loader-pct {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem; color: var(--accent); letter-spacing: 2px;
+    }
+
+    /* ─── Navbar ─── */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--glass-border);
+      transition: all 0.4s ease;
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto;
+      padding: 16px 40px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-right { display: flex; align-items: center; gap: 24px; }
+    .nav-phone {
+      display: flex; align-items: center; gap: 8px;
+      color: var(--text-primary); text-decoration: none;
+      font-size: 0.9rem; font-weight: 500;
+    }
+    .nav-phone svg { width: 18px; height: 18px; }
+    .nav-blog {
+      color: var(--text-secondary); text-decoration: none;
+      font-size: 0.9rem; font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-blog:hover { color: var(--accent); }
+    .nav-cta {
+      color: var(--bg); background: var(--accent);
+      padding: 10px 24px; border-radius: 8px;
+      font-weight: 600; font-size: 0.85rem;
+      text-decoration: none; border: none; cursor: pointer;
+      transition: box-shadow 0.25s ease, transform 0.2s ease;
+    }
+    .nav-cta:hover {
+      box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.45);
+      transform: translateY(-1px);
+    }
+
+    /* ═══════════════════════════════════════
+       SCROLL ANIMATION — Hero + Stats overlay
+       ═══════════════════════════════════════ */
+    .scroll-animation {
+      height: 300vh; /* long scroll area for the animation */
+      position: relative;
+      z-index: 1;
+    }
+    .scroll-sticky {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+    }
+    #frameCanvas {
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 1;
+    }
+    .frame-overlay {
+      position: absolute; inset: 0; z-index: 2;
+      background: linear-gradient(180deg,
+        rgba(0,0,0,0.4) 0%,
+        rgba(0,0,0,0.15) 40%,
+        rgba(0,0,0,0.4) 80%,
+        rgba(0,0,0,0.7) 100%
+      );
+    }
+
+    /* ─── Hero Content (over frame) ─── */
+    #heroOverlay {
+      position: absolute; inset: 0; z-index: 5;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; padding: 0 24px;
+      will-change: opacity, transform;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem; letter-spacing: 1px; font-weight: 600;
+      margin-bottom: 32px;
+    }
+    .hero-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.6rem, 5.5vw, 4.8rem);
+      font-weight: 700; line-height: 1.08;
+      letter-spacing: -0.02em; margin-bottom: 24px;
+      text-shadow: 0 2px 40px rgba(0,0,0,0.5);
+    }
+    .hero-title em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-subtitle {
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      color: rgba(240,240,240,0.7);
+      line-height: 1.7; max-width: 600px;
+      margin: 0 auto 40px;
+      text-shadow: 0 1px 20px rgba(0,0,0,0.7);
+    }
+    .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 48px; }
+    .btn-primary {
+      background: var(--accent); color: #000;
+      padding: 16px 36px; border-radius: 12px;
+      font-weight: 700; font-size: 0.95rem;
+      text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+      box-shadow: 0 0 28px rgba(var(--accent-rgb), 0.35);
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover { box-shadow: 0 0 45px rgba(var(--accent-rgb), 0.5); transform: translateY(-2px); }
+    .btn-secondary {
+      background: transparent; color: var(--text-primary);
+      padding: 16px 36px; border-radius: 12px;
+      font-weight: 500; font-size: 0.95rem;
+      text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+      transition: all 0.3s ease;
+    }
+    .btn-secondary:hover { color: var(--accent); }
+    .hero-trust {
+      display: flex; gap: 32px; flex-wrap: wrap; justify-content: center;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.85rem; color: rgba(255,255,255,0.6);
+    }
+    .trust-check {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: rgba(var(--accent-rgb), 0.15);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent); font-size: 0.7rem;
+    }
+    .scroll-hint {
+      position: absolute; bottom: 28px; left: 50%;
+      transform: translateX(-50%); z-index: 6;
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      animation: hint-bounce 2.8s ease infinite;
+    }
+    .scroll-hint span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem; letter-spacing: 2px;
+      text-transform: uppercase; color: rgba(255,255,255,0.3);
+    }
+    .scroll-arrow { width: 1px; height: 30px; background: linear-gradient(180deg, rgba(var(--accent-rgb),0.6), transparent); }
+    @keyframes hint-bounce {
+      0%, 100% { opacity: 0.5; transform: translateX(-50%) translateY(0); }
+      50% { opacity: 0.9; transform: translateX(-50%) translateY(7px); }
+    }
+
+    /* ─── Stats Overlay (over frame, appears at 50%) ─── */
+    #statsOverlay {
+      position: absolute; inset: 0; z-index: 5;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      will-change: opacity, transform;
+      opacity: 0;
+      transform: translateY(40px);
+      pointer-events: none;
+      background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 100%);
+    }
+    .stats-overlay-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 700; color: #fff;
+      text-align: center; margin-bottom: 40px;
+      letter-spacing: -0.02em;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.7);
+    }
+    .stats-overlay-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 20px; max-width: 1050px; width: 100%;
+      padding: 0 32px;
+    }
+    .stat-overlay-item {
+      text-align: center; padding: 36px 24px;
+      position: relative;
+      background: rgba(0, 229, 204, 0.10);
+      border: 1px solid rgba(0, 229, 204, 0.25);
+      border-radius: 20px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .stat-overlay-number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.8rem, 6vw, 4.5rem); font-weight: 700;
+      color: #ffffff; display: block; line-height: 1;
+      margin-bottom: 14px;
+      white-space: nowrap;
+      text-shadow: 0 0 40px rgba(255,255,255,0.3), 0 2px 20px rgba(0,0,0,0.8);
+    }
+    .stat-overlay-label {
+      font-size: 1rem; color: rgba(255,255,255,0.85);
+      font-weight: 500; letter-spacing: 0.3px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.9);
+    }
+
+    /* ═══════════════════════════════════════
+       REMAINING SECTIONS — SNAP SCROLL
+       ═══════════════════════════════════════ */
+    .snap-section {
+      min-height: 100vh;
+      scroll-snap-align: start;
+      position: relative;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .snap-section .section-inner {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+      width: 100%;
+    }
+    .snap-section.in-view .section-inner {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── Section Commons ─── */
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700; letter-spacing: -0.02em;
+      line-height: 1.1; margin-bottom: 16px;
+    }
+    .section-sub {
+      color: var(--text-secondary);
+      font-size: 1rem; line-height: 1.65;
+      max-width: 560px;
+    }
+    .section-divider {
+      width: 100%; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(var(--accent-rgb), 0.12), transparent);
+    }
+
+    /* ─── Transformations ─── */
+    #transformations { background: var(--bg); }
+    .transform-container {
+      max-width: 1100px; margin: 0 auto;
+      padding: 60px 32px; text-align: center;
+    }
+    .transform-slider {
+      position: relative; width: 100%;
+      max-width: 900px; margin: 48px auto 0;
+      border-radius: 20px; overflow: hidden;
+      aspect-ratio: 16/9; background: #111;
+      border: 1px solid var(--glass-border);
+      cursor: ew-resize;
+    }
+    .slider-img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      position: absolute; top: 0; left: 0;
+      user-select: none; -webkit-user-drag: none;
+    }
+    .slider-img-after { z-index: 1; position: relative; }
+    .slider-before-wrap {
+      position: absolute; top: 0; left: 0;
+      width: 50%; height: 100%;
+      overflow: hidden; z-index: 3;
+    }
+    .slider-img-before {
+      position: absolute; top: 0; left: 0;
+      /* Width matches the full .transform-slider, not the clipped wrap */
+      width: 100vw; /* fallback */
+      height: 100%; object-fit: cover;
+    }
+    /* Use container query-like trick: before img = same width as parent slider */
+    .transform-slider .slider-img-before {
+      width: var(--slider-w, 900px);
+    }
+    .slider-overlay {
+      position: absolute; inset: 0; z-index: 6;
+      display: flex; justify-content: space-between;
+      align-items: flex-start; padding: 20px; pointer-events: none;
+    }
+    .slider-label {
+      padding: 8px 20px; border-radius: 8px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.85rem; font-weight: 600;
+    }
+    .label-avant { background: rgba(0,0,0,0.7); color: #fff; }
+    .label-apres { background: var(--accent); color: #000; }
+    .slider-handle {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 48px; height: 48px; border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255,255,255,0.5);
+      display: flex; align-items: center; justify-content: center;
+      cursor: ew-resize; color: #fff; font-size: 1.2rem; z-index: 5;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      transition: box-shadow 0.2s;
+    }
+    .slider-handle:hover { box-shadow: 0 4px 30px rgba(0,0,0,0.6); border-color: #fff; }
+    .slider-line {
+      position: absolute; top: 0; bottom: 0;
+      left: 50%; width: 3px; z-index: 4;
+      background: rgba(255,255,255,0.7);
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .project-info {
+      max-width: 900px; margin: 24px auto 0;
+      text-align: left; padding: 0 8px;
+    }
+    .project-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem; font-weight: 700; margin-bottom: 6px;
+    }
+    .project-desc { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px; }
+    .project-meta { display: flex; gap: 40px; flex-wrap: wrap; }
+    .meta-item { display: flex; align-items: center; gap: 10px; }
+    .meta-icon { color: var(--accent); font-size: 1.1rem; width: 20px; display: flex; justify-content: center; }
+    .meta-label { font-size: 0.78rem; color: var(--text-secondary); }
+    .meta-value { font-size: 0.95rem; font-weight: 600; }
+    .carousel-dots {
+      display: flex; gap: 8px; justify-content: center;
+      margin-top: 32px; align-items: center;
+    }
+    .carousel-arrow {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--glass-bg); border: 1px solid var(--glass-border);
+      color: var(--text-secondary); display: flex;
+      align-items: center; justify-content: center;
+      cursor: pointer; font-size: 0.9rem; transition: all 0.2s;
+    }
+    .carousel-arrow:hover { border-color: rgba(var(--accent-rgb), 0.3); color: var(--accent); }
+    .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(255,255,255,0.2); transition: all 0.3s;
+    }
+    .dot.active { width: 28px; border-radius: 4px; background: var(--accent); }
+    .dot { cursor: pointer; }
+
+    /* Carousel slides */
+    .carousel-wrapper {
+      position: relative; max-width: 900px;
+      margin: 24px auto 0; overflow: hidden;
+    }
+    .carousel-slide {
+      display: none;
+      width: 100%;
+    }
+    .carousel-slide.active { display: block; }
+    /* During animation: old slide stays in flow, new slide overlays via absolute */
+    .carousel-slide.is-entering {
+      display: block;
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      z-index: 2;
+    }
+    .carousel-slide.is-leaving {
+      display: block;
+      position: relative;
+      z-index: 1;
+      animation: fadeOut 0.35s ease forwards;
+    }
+    .carousel-slide.slide-in-right { animation: slideIn 0.55s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
+    .carousel-slide.slide-in-left { animation: slideIn 0.55s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(var(--slide-from)); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+
+    /* ─── Exigence Technique ─── */
+    #technique { background: var(--bg2); }
+    .technique-header {
+      text-align: center; max-width: 1100px;
+      margin: 0 auto 48px; padding: 0 32px;
+    }
+    .technique-container {
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 32px 100px;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 48px; align-items: center;
+    }
+    .technique-content { }
+    .technique-steps { display: flex; flex-direction: column; gap: 28px; }
+    .technique-step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-icon {
+      width: 48px; height: 48px; flex-shrink: 0;
+      border-radius: 14px;
+      background: rgba(var(--accent-rgb), 0.08);
+      border: 1px solid rgba(var(--accent-rgb), 0.15);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent); font-size: 1.2rem;
+    }
+    .step-text h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.05rem; font-weight: 600; margin-bottom: 6px;
+    }
+    .step-text p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; }
+    .technique-visual {
+      position: relative; border-radius: 20px;
+      overflow: visible;
+    }
+    .technique-img {
+      width: 100%; border-radius: 20px;
+      object-fit: cover; display: block;
+    }
+    .guarantee-badge {
+      position: absolute; bottom: -24px; right: -24px;
+      background: var(--accent); color: #000;
+      width: 170px; height: 140px; border-radius: 24px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 4px;
+      font-family: 'Space Grotesk', sans-serif;
+      box-shadow: 0 10px 40px rgba(var(--accent-rgb), 0.3);
+      z-index: 2;
+    }
+    .guarantee-badge .num { font-size: 2.6rem; font-weight: 700; line-height: 1; white-space: nowrap; }
+    .guarantee-badge .txt { font-size: 0.85rem; font-weight: 600; }
+
+    /* ─── Avantages ─── */
+    #avantages { background: var(--bg); }
+    .avantages-container {
+      max-width: 1100px; margin: 0 auto;
+      padding: 100px 32px; text-align: center;
+    }
+    .avantages-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px; margin: 56px 0 48px;
+    }
+    .avantage-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px; padding: 40px 28px; text-align: left;
+      transition: transform 0.3s ease, border-color 0.3s;
+    }
+    .avantage-card:hover { transform: translateY(-5px); border-color: rgba(var(--accent-rgb), 0.2); }
+    .avantage-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: rgba(var(--accent-rgb), 0.08);
+      border: 1px solid rgba(var(--accent-rgb), 0.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; margin-bottom: 24px;
+    }
+    .avantage-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem; font-weight: 600; margin-bottom: 12px;
+    }
+    .avantage-card p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; }
+
+    /* ─── Domaines ─── */
+    #domaines { background: var(--bg2); }
+    .domaines-container {
+      max-width: 1100px; margin: 0 auto;
+      padding: 100px 32px; text-align: center;
+    }
+    .domaines-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px; margin-top: 56px;
+    }
+    .domaine-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px; text-align: left;
+      transition: transform 0.3s ease, border-color 0.3s;
+      overflow: hidden;
+    }
+    .domaine-card:hover { transform: translateY(-5px); border-color: rgba(var(--accent-rgb), 0.25); }
+    .domaine-card-img {
+      width: 100%; height: 220px;
+      object-fit: cover; display: block;
+    }
+    .domaine-card-body { padding: 28px 28px 32px; }
+    .domaine-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .domaine-icon {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: rgba(var(--accent-rgb), 0.08);
+      border: 1px solid rgba(var(--accent-rgb), 0.15);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent);
+    }
+    .domaine-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem; font-weight: 600;
+    }
+    .domaine-card-body > p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px; }
+    .domaine-features { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .domaine-features li {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.85rem; color: var(--text-secondary);
+    }
+    .domaine-features li svg { flex-shrink: 0; }
+    .domaine-features li::before { display: none; }
+
+    /* ─── Partenaire ─── */
+    /* ─── Tarifs ─── */
+    #tarifs { background: var(--bg); }
+    .tarifs-container {
+      max-width: 1100px; margin: 0 auto;
+      padding: 100px 32px; text-align: center;
+    }
+    .tarifs-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px; margin: 56px 0 32px;
+    }
+    .tarif-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px; padding: 40px 28px;
+      text-align: center;
+      transition: transform 0.3s ease, border-color 0.3s;
+      position: relative;
+    }
+    .tarif-card:hover { transform: translateY(-5px); border-color: rgba(var(--accent-rgb), 0.25); }
+    .tarif-card.popular {
+      border-color: rgba(var(--accent-rgb), 0.4);
+      background: rgba(var(--accent-rgb), 0.04);
+    }
+    .tarif-badge {
+      position: absolute; top: -12px; left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent); color: #000;
+      padding: 4px 16px; border-radius: 20px;
+      font-size: 0.72rem; font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.5px; text-transform: uppercase;
+    }
+    .tarif-type {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem; font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .tarif-desc {
+      font-size: 0.82rem; color: var(--text-secondary);
+      margin-bottom: 24px; line-height: 1.5;
+    }
+    .tarif-price {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.4rem; font-weight: 700;
+      color: #fff; margin-bottom: 4px;
+    }
+    .tarif-price span { font-size: 1rem; font-weight: 400; color: var(--text-secondary); }
+    .tarif-unit { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 28px; }
+    .tarif-features {
+      list-style: none; text-align: left;
+      display: flex; flex-direction: column; gap: 12px;
+      margin-bottom: 28px;
+    }
+    .tarif-features li {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.85rem; color: var(--text-secondary);
+    }
+    .tarif-features li svg { flex-shrink: 0; }
+    .tarif-cta {
+      display: block; width: 100%;
+      padding: 14px; border-radius: 12px;
+      text-decoration: none; font-weight: 600;
+      font-size: 0.9rem; text-align: center;
+      transition: all 0.3s;
+    }
+    .tarif-cta-primary {
+      background: var(--accent); color: #000;
+    }
+    .tarif-cta-primary:hover { box-shadow: 0 0 30px rgba(var(--accent-rgb), 0.4); }
+    .tarif-cta-secondary {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--glass-border);
+      color: var(--text-primary);
+    }
+    .tarif-cta-secondary:hover { border-color: rgba(var(--accent-rgb), 0.3); }
+    .tarif-note {
+      font-size: 0.78rem; color: var(--text-secondary);
+      max-width: 600px; margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    #partenaire {
+      background: linear-gradient(180deg,
+        rgba(0, 229, 204, 0.03) 0%,
+        rgba(0, 229, 204, 0.10) 50%,
+        rgba(0, 229, 204, 0.03) 100%
+      );
+    }
+    .partenaire-container {
+      max-width: 900px; margin: 0 auto;
+      padding: 60px 32px; text-align: center;
+    }
+    .partenaire-box {
+      background: rgba(var(--accent-rgb), 0.04);
+      border: 1px solid rgba(var(--accent-rgb), 0.15);
+      border-radius: 24px; padding: 44px 40px; margin-top: 36px;
+    }
+    .partenaire-box p {
+      font-size: 1.05rem; color: var(--text-secondary);
+      line-height: 1.7; margin-bottom: 36px;
+      max-width: 640px; margin-left: auto; margin-right: auto;
+    }
+    .certif-grid { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
+    .certif-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 12px 20px; border-radius: 12px;
+      background: rgba(var(--accent-rgb), 0.06);
+      border: 1px solid rgba(var(--accent-rgb), 0.12);
+      font-size: 0.85rem; color: var(--text-primary);
+    }
+    .certif-item span:first-child { color: var(--accent); font-size: 1.1rem; }
+
+    /* ─── Témoignages ─── */
+    #temoignages {
+      background: linear-gradient(180deg,
+        rgba(0, 229, 204, 0.03) 0%,
+        rgba(0, 229, 204, 0.08) 50%,
+        rgba(0, 229, 204, 0.03) 100%
+      );
+    }
+    .temoignages-container {
+      max-width: 1100px; margin: 0 auto;
+      padding: 60px 32px; text-align: center;
+    }
+    .rating-display {
+      display: flex; align-items: center; gap: 12px;
+      justify-content: center; margin-bottom: 8px;
+    }
+    .rating-stars { color: #f5a623; font-size: 1.4rem; letter-spacing: 2px; }
+    .rating-number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem; font-weight: 700;
+    }
+    .rating-sub { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 48px; }
+    .temoignages-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    .temoin-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px; padding: 32px 24px; text-align: left;
+    }
+    .temoin-stars { color: #f5a623; font-size: 0.9rem; margin-bottom: 16px; letter-spacing: 2px; }
+    .temoin-text { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 24px; font-style: italic; }
+    .temoin-author { display: flex; align-items: center; gap: 12px; }
+    .temoin-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.3), rgba(var(--accent-rgb), 0.1));
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.85rem; color: var(--accent);
+    }
+    .temoin-name { font-weight: 600; font-size: 0.9rem; }
+    .temoin-role { font-size: 0.78rem; color: var(--text-secondary); }
+    .temoin-project {
+      margin-top: 4px; font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem; color: var(--accent); letter-spacing: 0.5px;
+    }
+
+    /* ─── FAQ ─── */
+    #faq { background: var(--bg); }
+    .faq-container {
+      max-width: 750px; margin: 0 auto;
+      padding: 100px 32px; text-align: center;
+    }
+    .faq-list { margin-top: 48px; text-align: left; }
+    .faq-item { border-bottom: 1px solid var(--glass-border); }
+    .faq-question {
+      width: 100%; padding: 24px 0;
+      background: none; border: none;
+      color: var(--text-primary);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem; font-weight: 600;
+      text-align: left; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 16px; transition: color 0.2s;
+    }
+    .faq-question:hover { color: var(--accent); }
+    .faq-icon {
+      width: 28px; height: 28px; flex-shrink: 0;
+      border-radius: 50%;
+      border: 1px solid var(--glass-border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; color: var(--accent);
+      transition: transform 0.3s ease, background 0.3s;
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+      background: rgba(var(--accent-rgb), 0.1);
+    }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .faq-item.open .faq-answer { max-height: 200px; }
+    .faq-answer p {
+      padding: 0 0 24px;
+      font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;
+    }
+
+    /* ─── Devis ─── */
+    #devis { background: var(--bg2); }
+    .devis-container {
+      max-width: 700px; margin: 0 auto;
+      padding: 100px 32px; text-align: center;
+    }
+    .devis-form { margin-top: 48px; text-align: left; }
+    .form-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group.full { grid-column: 1 / -1; }
+    .form-group label {
+      font-size: 0.82rem; font-weight: 500; color: var(--text-secondary);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px; padding: 14px 16px;
+      color: var(--text-primary);
+      font-family: 'Archivo', sans-serif;
+      font-size: 0.9rem; transition: border-color 0.2s; outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: rgba(var(--accent-rgb), 0.4);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-group select { appearance: none; cursor: pointer; }
+    .form-submit {
+      margin-top: 24px; width: 100%;
+      background: var(--accent); color: #000;
+      border: none; padding: 18px; border-radius: 12px;
+      font-weight: 700; font-size: 1rem; cursor: pointer;
+      transition: all 0.3s;
+    }
+    .form-submit:hover { box-shadow: 0 0 40px rgba(var(--accent-rgb), 0.4); }
+    .form-consent {
+      margin-top: 16px; font-size: 0.75rem;
+      color: rgba(255,255,255,0.3); text-align: center;
+    }
+    .direct-contact {
+      margin-top: 40px; padding-top: 32px;
+      border-top: 1px solid var(--glass-border); text-align: center;
+    }
+    .direct-contact p { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 16px; }
+    .contact-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
+    .contact-link {
+      display: flex; align-items: center; gap: 8px;
+      color: var(--text-primary); text-decoration: none;
+      font-size: 0.9rem; transition: color 0.2s;
+    }
+    .contact-link:hover { color: var(--accent); }
+    .contact-link-icon {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: rgba(var(--accent-rgb), 0.08);
+      border: 1px solid rgba(var(--accent-rgb), 0.15);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent); font-size: 0.9rem;
+    }
+
+    /* ─── Newsletter ─── */
+    #newsletter {
+      background: linear-gradient(180deg, var(--bg) 0%, rgba(0,229,204,0.08) 50%, var(--bg) 100%);
+      padding: 60px 32px;
+      text-align: center;
+    }
+    .newsletter-container {
+      max-width: 600px; margin: 0 auto;
+    }
+    .newsletter-form {
+      display: flex; gap: 12px;
+      margin-top: 28px;
+    }
+    .newsletter-form input {
+      flex: 1; background: rgba(255,255,255,0.05);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px; padding: 16px 20px;
+      color: var(--text-primary); font-size: 0.9rem;
+      font-family: 'Archivo', sans-serif; outline: none;
+    }
+    .newsletter-form input:focus { border-color: rgba(var(--accent-rgb), 0.4); }
+    .newsletter-form button {
+      background: var(--accent); color: #000;
+      border: none; border-radius: 12px; padding: 16px 32px;
+      font-weight: 700; font-size: 0.9rem; cursor: pointer;
+      white-space: nowrap; transition: all 0.3s;
+    }
+    .newsletter-form button:hover { box-shadow: 0 0 30px rgba(var(--accent-rgb), 0.4); }
+    .newsletter-success {
+      display: none; margin-top: 16px;
+      color: var(--accent); font-size: 0.9rem; font-weight: 500;
+    }
+    .newsletter-success.show { display: block; }
+    @media (max-width: 520px) {
+      .newsletter-form { flex-direction: column; }
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--glass-border);
+      padding: 64px 32px 32px;
+    }
+    .footer-grid {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px; margin-bottom: 48px;
+    }
+    .footer-brand img { height: 36px; margin-bottom: 16px; }
+    .footer-brand p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; max-width: 280px; }
+    .footer-col h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem; font-weight: 600; margin-bottom: 16px;
+    }
+    .footer-col a {
+      display: block; color: var(--text-secondary);
+      text-decoration: none; font-size: 0.85rem;
+      padding: 4px 0; transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-bottom {
+      max-width: 1100px; margin: 0 auto;
+      padding-top: 24px; border-top: 1px solid var(--glass-border);
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px;
+    }
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
+    .footer-legal { display: flex; gap: 20px; }
+    .footer-legal a { color: rgba(255,255,255,0.25); font-size: 0.78rem; text-decoration: none; }
+    .footer-legal a:hover { color: var(--accent); }
+
+    /* ─── Back to Top ─── */
+    .back-top {
+      position: fixed; bottom: 100px; right: 28px;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid var(--glass-border);
+      color: var(--text-secondary); cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      z-index: 899;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s, background 0.3s, transform 0.2s;
+    }
+    .back-top.visible { opacity: 1; pointer-events: auto; }
+    .back-top:hover { background: rgba(var(--accent-rgb), 0.15); color: var(--accent); transform: translateY(-2px); }
+
+    /* ─── Cookie Banner ─── */
+    .cookie-banner {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      background: rgba(15,17,21,0.97);
+      border-top: 1px solid var(--glass-border);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      padding: 20px 32px;
+      display: flex; align-items: center; justify-content: center;
+      gap: 24px; flex-wrap: wrap;
+      z-index: 9000;
+      transform: translateY(100%);
+      transition: transform 0.5s cubic-bezier(0.25,1,0.5,1);
+    }
+    .cookie-banner.show { transform: translateY(0); }
+    .cookie-banner p { font-size: 0.82rem; color: var(--text-secondary); max-width: 600px; line-height: 1.5; }
+    .cookie-banner a { color: var(--accent); text-decoration: underline; }
+    .cookie-btns { display: flex; gap: 10px; flex-shrink: 0; }
+    .cookie-accept {
+      background: var(--accent); color: #000;
+      border: none; padding: 10px 24px; border-radius: 8px;
+      font-weight: 600; font-size: 0.82rem; cursor: pointer;
+      font-family: 'Archivo', sans-serif;
+      transition: box-shadow 0.2s;
+    }
+    .cookie-accept:hover { box-shadow: 0 0 16px rgba(var(--accent-rgb), 0.4); }
+    .cookie-decline {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--glass-border);
+      color: var(--text-secondary);
+      padding: 10px 20px; border-radius: 8px;
+      font-size: 0.82rem; cursor: pointer;
+      font-family: 'Archivo', sans-serif;
+      transition: border-color 0.2s;
+    }
+    .cookie-decline:hover { border-color: rgba(255,255,255,0.2); }
+
+    /* ─── Chatbot ─── */
+    .chatbot-btn {
+      position: fixed; bottom: 28px; right: 28px;
+      width: 60px; height: 60px; border-radius: 50%;
+      background: var(--accent); color: #000;
+      border: none; cursor: pointer; z-index: 900;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 24px rgba(var(--accent-rgb), 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .chatbot-btn:hover { transform: scale(1.08); box-shadow: 0 8px 32px rgba(var(--accent-rgb), 0.5); }
+    .chatbot-btn.open { border-radius: 14px; }
+    .chatbot-pulse {
+      position: absolute; inset: -4px; border-radius: 50%;
+      border: 2px solid var(--accent); opacity: 0;
+      animation: chatPulse 2.5s ease infinite;
+    }
+    @keyframes chatPulse {
+      0% { transform: scale(1); opacity: 0.6; }
+      100% { transform: scale(1.5); opacity: 0; }
+    }
+    .chatbot-window {
+      position: fixed; bottom: 100px; right: 28px;
+      width: 370px; max-height: 520px;
+      background: #141418; border: 1px solid var(--glass-border);
+      border-radius: 20px; z-index: 901;
+      display: none; flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+      animation: chatOpen 0.3s cubic-bezier(0.25,1,0.5,1);
+    }
+    .chatbot-window.visible { display: flex; }
+    @keyframes chatOpen {
+      from { opacity: 0; transform: translateY(20px) scale(0.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .chatbot-header {
+      padding: 18px 20px; display: flex; align-items: center; gap: 12px;
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .chatbot-avatar {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700; font-size: 0.7rem;
+      color: #000; letter-spacing: -0.5px;
+    }
+    .chatbot-header-text h4 { font-size: 0.9rem; font-weight: 600; }
+    .chatbot-header-text p { font-size: 0.72rem; color: var(--accent); }
+    .chatbot-close {
+      margin-left: auto; background: none; border: none;
+      color: var(--text-secondary); cursor: pointer; font-size: 1.2rem;
+      padding: 4px;
+    }
+    .chatbot-body {
+      flex: 1; overflow-y: auto; padding: 16px;
+      display: flex; flex-direction: column; gap: 12px;
+      max-height: 340px;
+    }
+    .chat-msg {
+      max-width: 85%; padding: 12px 16px;
+      border-radius: 16px; font-size: 0.85rem;
+      line-height: 1.55;
+    }
+    .chat-bot {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--glass-border);
+      align-self: flex-start;
+      border-bottom-left-radius: 4px;
+    }
+    .chat-user {
+      background: rgba(var(--accent-rgb), 0.15);
+      border: 1px solid rgba(var(--accent-rgb), 0.2);
+      align-self: flex-end;
+      border-bottom-right-radius: 4px;
+    }
+    .chat-options {
+      display: flex; flex-direction: column; gap: 8px;
+      align-self: flex-start; max-width: 85%;
+    }
+    .chat-option-btn {
+      background: rgba(var(--accent-rgb), 0.08);
+      border: 1px solid rgba(var(--accent-rgb), 0.2);
+      border-radius: 12px; padding: 10px 16px;
+      color: var(--text-primary); font-size: 0.82rem;
+      cursor: pointer; text-align: left;
+      transition: all 0.2s; font-family: 'Archivo', sans-serif;
+    }
+    .chat-option-btn:hover {
+      background: rgba(var(--accent-rgb), 0.15);
+      border-color: var(--accent);
+    }
+    .chatbot-input {
+      display: flex; gap: 8px; padding: 12px 16px;
+      border-top: 1px solid var(--glass-border);
+    }
+    .chatbot-input input {
+      flex: 1; background: rgba(255,255,255,0.04);
+      border: 1px solid var(--glass-border);
+      border-radius: 10px; padding: 10px 14px;
+      color: var(--text-primary); font-size: 0.85rem;
+      font-family: 'Archivo', sans-serif; outline: none;
+    }
+    .chatbot-input input:focus { border-color: rgba(var(--accent-rgb), 0.4); }
+    .chatbot-input button {
+      background: var(--accent); color: #000;
+      border: none; border-radius: 10px; padding: 10px 16px;
+      cursor: pointer; font-weight: 600; font-size: 0.85rem;
+      transition: box-shadow 0.2s;
+    }
+    .chatbot-input button:hover { box-shadow: 0 0 16px rgba(var(--accent-rgb), 0.4); }
+    @media (max-width: 480px) {
+      .chatbot-window { right: 12px; left: 12px; width: auto; bottom: 96px; }
+      .chatbot-btn { bottom: 16px; right: 16px; }
+    }
+
+    /* ─── Responsive ─── */
+    /* ═══ TABLET (1024px) ═══ */
+    @media (max-width: 1024px) {
+      .technique-container { grid-template-columns: 1fr; }
+      .technique-visual { max-width: 500px; margin: 0 auto; }
+      .avantages-grid { grid-template-columns: 1fr 1fr; }
+      .domaines-grid { grid-template-columns: 1fr 1fr; }
+      .tarifs-grid { grid-template-columns: 1fr 1fr; }
+      .temoignages-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .stats-overlay-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .stat-overlay-number { font-size: clamp(2rem, 5vw, 3rem); }
+      .stats-overlay-title { font-size: 1.6rem; }
+      .nav-inner { padding: 14px 24px; }
+      .hero-title { font-size: clamp(2rem, 5vw, 3.5rem); }
+      .project-meta { gap: 24px; }
+    }
+
+    /* ═══ MOBILE (768px) ═══ */
+    @media (max-width: 768px) {
+      .nav-phone { display: none; }
+      .nav-blog { font-size: 0.82rem; }
+      .nav-inner { padding: 12px 16px; }
+      .nav-logo img { height: 28px; }
+      .nav-right { gap: 14px; }
+      .nav-cta { padding: 8px 16px; font-size: 0.78rem; }
+
+      .scroll-animation { height: 250vh; }
+      .hero-title { font-size: 2rem; }
+      .hero-subtitle { font-size: 0.9rem; margin-bottom: 28px; }
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .btn-primary, .btn-secondary { width: 100%; max-width: 300px; text-align: center; justify-content: center; }
+      .hero-trust { flex-direction: column; align-items: center; gap: 10px; }
+      .trust-item { font-size: 0.78rem; }
+      .hero-badge { font-size: 0.65rem; }
+
+      .stats-overlay-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 0 16px; }
+      .stat-overlay-item { padding: 24px 16px; border-radius: 16px; }
+      .stat-overlay-number { font-size: 2rem; }
+      .stat-overlay-label { font-size: 0.82rem; }
+      .stats-overlay-title { font-size: 1.3rem; margin-bottom: 24px; }
+
+      .section-title { font-size: 1.6rem; }
+      .section-sub { font-size: 0.9rem; }
+      .section-label { font-size: 0.65rem; }
+
+      .transform-container { padding: 40px 16px; }
+      .transform-slider { aspect-ratio: 4/3; border-radius: 14px; }
+      .project-info { padding: 0; }
+      .project-title { font-size: 1.15rem; }
+      .project-meta { gap: 20px; flex-wrap: wrap; }
+      .carousel-dots { margin-top: 20px; }
+
+      .technique-container { grid-template-columns: 1fr; padding: 0 16px 60px; gap: 32px; }
+      .technique-header { padding: 0 16px; margin-bottom: 32px; }
+      .technique-visual { max-width: 100%; }
+      .guarantee-badge { width: 120px; height: 100px; bottom: -12px; right: -12px; }
+      .guarantee-badge .num { font-size: 1.8rem; }
+      .step-icon { width: 40px; height: 40px; }
+      .technique-steps { gap: 24px; }
+
+      .avantages-container { padding: 60px 16px; }
+      .avantages-grid { grid-template-columns: 1fr; margin: 32px 0 32px; }
+      .avantage-card { padding: 28px 20px; }
+
+      .domaines-container { padding: 60px 16px; }
+      .domaines-grid { grid-template-columns: 1fr; margin-top: 32px; }
+      .domaine-card-img { height: 180px; }
+
+      .tarifs-grid { grid-template-columns: 1fr; }
+      .tarifs-container { padding: 60px 16px; }
+      .tarif-card { padding: 32px 20px; }
+
+      .partenaire-container { padding: 48px 16px; }
+      .partenaire-box { padding: 28px 20px; }
+      .certif-grid { flex-direction: column; gap: 12px; }
+
+      .temoignages-container { padding: 48px 16px; }
+      .temoignages-grid { grid-template-columns: 1fr; }
+      .temoin-card { padding: 24px 20px; }
+
+      .faq-container { padding: 60px 16px; }
+      .faq-question { font-size: 0.9rem; padding: 20px 0; }
+
+      .devis-container { padding: 60px 16px; }
+      .form-grid { grid-template-columns: 1fr; }
+
+      .newsletter-form { flex-direction: column; }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-legal { justify-content: center; }
+
+      .back-top { bottom: 96px; right: 16px; width: 38px; height: 38px; }
+      .chatbot-btn { bottom: 16px; right: 16px; width: 50px; height: 50px; }
+      .chatbot-window { right: 12px; left: 12px; width: auto; bottom: 80px; max-height: 440px; }
+    }
+
+    /* ═══ SMALL MOBILE (420px) ═══ */
+    @media (max-width: 420px) {
+      .hero-title { font-size: 1.7rem; }
+      .hero-badge { font-size: 0.58rem; padding: 5px 12px; }
+      .stats-overlay-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+      .stat-overlay-number { font-size: 1.7rem; }
+      .stat-overlay-item { padding: 18px 12px; border-radius: 12px; }
+      .stats-overlay-title { font-size: 1.1rem; }
+      .section-title { font-size: 1.4rem; }
+      .tarif-price { font-size: 2rem; }
+      .rating-number { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="scrollProgress"></div>
+
+  <!-- Loader -->
+  <div id="loader">
+    <img src="logo.webp" class="loader-logo" alt="Epoxya" />
+    <p class="loader-text">Chargement</p>
+    <div class="loader-bar-track">
+      <div class="loader-bar-fill" id="loaderBar"></div>
+    </div>
+    <span class="loader-pct" id="loaderPct">0%</span>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+        <img src="logo.webp" alt="Epoxya" />
+      </a>
+      <div class="nav-right">
+        <a href="tel:+32486804357" class="nav-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +32 486 804 357
+        </a>
+        <a href="blog.html" class="nav-blog">Blog</a>
+        <a href="#devis" class="nav-cta">Devis gratuit</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       SCROLL ANIMATION — Hero + Stats
+       300vh de scroll, sticky 100vh
+       Hero disparait à 50%, Stats apparaissent après
+       ═══════════════════════════════════════ -->
+  <section class="scroll-animation">
+    <div class="scroll-sticky">
+
+      <!-- Canvas frames (z-index: 1) -->
+      <canvas id="frameCanvas"></canvas>
+      <div class="frame-overlay"></div>
+
+      <!-- Hero overlay — visible de 0% à 50% -->
+      <div id="heroOverlay">
+        <div class="hero-badge">Partenaire officiel Chemtec &bull; Belgique</div>
+        <h1 class="hero-title">
+          Des sols ultra-résistants<br/>qui <em>subliment</em> vos<br/>espaces
+        </h1>
+        <p class="hero-subtitle">
+          Un sol visuellement spectaculaire, facile à entretenir et conçu pour durer des décennies
+        </p>
+        <div class="hero-buttons">
+          <a href="#devis" class="btn-primary">Demander un devis gratuit &rarr;</a>
+          <a href="#transformations" class="btn-secondary">Voir nos réalisations</a>
+        </div>
+        <div class="hero-trust" style="margin-top: 40px;">
+          <div class="trust-item"><div class="trust-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Réponse sous 24h</div>
+          <div class="trust-item"><div class="trust-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Conseils personnalisés</div>
+          <div class="trust-item"><div class="trust-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Devis gratuit sans engagement</div>
+        </div>
+      </div>
+
+      <!-- Stats overlay — visible de 50% à 100% -->
+      <div id="statsOverlay">
+        <h2 class="stats-overlay-title">La confiance, en chiffres</h2>
+        <div class="stats-overlay-grid">
+          <div class="stat-overlay-item" data-target="150" data-suffix="+">
+            <span class="stat-overlay-number">0</span>
+            <span class="stat-overlay-label">Projets réalisés</span>
+          </div>
+          <div class="stat-overlay-item" data-target="4.9" data-suffix="/5">
+            <span class="stat-overlay-number">0</span>
+            <span class="stat-overlay-label">Note moyenne</span>
+          </div>
+          <div class="stat-overlay-item" data-target="100" data-suffix="%">
+            <span class="stat-overlay-number">0</span>
+            <span class="stat-overlay-label">Clients satisfaits</span>
+          </div>
+          <div class="stat-overlay-item" data-target="10" data-suffix="&nbsp;ans">
+            <span class="stat-overlay-number">0</span>
+            <span class="stat-overlay-label">Garantie</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll hint -->
+      <div class="scroll-hint" id="scrollHint">
+        <span>Scrollez</span>
+        <div class="scroll-arrow"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════ TRANSFORMATIONS ═══════ -->
+  <section id="transformations" class="snap-section">
+    <div class="section-inner">
+      <div class="transform-container">
+        <h2 class="section-title">Nos transformations</h2>
+        <p class="section-sub" style="margin: 0 auto;">Glissez pour découvrir l'effet spectaculaire de nos revêtements époxy</p>
+
+        <!-- Carousel wrapper -->
+        <div class="carousel-wrapper" id="carouselWrapper">
+
+          <!-- Slide 1 — Showroom (premier) -->
+          <div class="carousel-slide active" data-slide="0">
+            <div class="transform-slider" data-slider>
+              <img loading="lazy" src="shoowroom2.webp" alt="Après" class="slider-img slider-img-after" />
+              <div class="slider-before-wrap">
+                <img loading="lazy" src="shoowroom1.webp" alt="Avant" class="slider-img slider-img-before" />
+              </div>
+              <div class="slider-overlay">
+                <span class="slider-label label-avant">Avant</span>
+                <span class="slider-label label-apres">Après</span>
+              </div>
+              <div class="slider-line"></div>
+              <div class="slider-handle"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l-4 6 4 6M13 4l4 6-4 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Showroom commercial</h3>
+              <p class="project-desc">Sol époxy effet métallique bleu miroir</p>
+              <div class="project-meta">
+                <div class="meta-item">
+                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+                  <div><div class="meta-label">Surface</div><div class="meta-value">120 m²</div></div>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                  <div><div class="meta-label">Ville</div><div class="meta-value">Paris</div></div>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+                  <div><div class="meta-label">Durée</div><div class="meta-value">3 jours</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 — Garage -->
+          <div class="carousel-slide" data-slide="1">
+            <div class="transform-slider" data-slider>
+              <img loading="lazy" src="garage2.webp" alt="Après" class="slider-img slider-img-after" />
+              <div class="slider-before-wrap">
+                <img loading="lazy" src="garage1.webp" alt="Avant" class="slider-img slider-img-before" />
+              </div>
+              <div class="slider-overlay">
+                <span class="slider-label label-avant">Avant</span>
+                <span class="slider-label label-apres">Après</span>
+              </div>
+              <div class="slider-line"></div>
+              <div class="slider-handle"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l-4 6 4 6M13 4l4 6-4 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Garage résidentiel</h3>
+              <p class="project-desc">Transformation complète avec finition brillante</p>
+              <div class="project-meta">
+                <div class="meta-item">
+                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+                  <div><div class="meta-label">Surface</div><div class="meta-value">45 m²</div></div>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                  <div><div class="meta-label">Ville</div><div class="meta-value">Bruxelles</div></div>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+                  <div><div class="meta-label">Durée</div><div class="meta-value">2 jours</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 — Entrepôt -->
+          <div class="carousel-slide" data-slide="2">
+            <div class="transform-slider" data-slider>
+              <img loading="lazy" src="entrepot2.webp" alt="Après" class="slider-img slider-img-after" />
+              <div class="slider-before-wrap">
+                <img loading="lazy" src="entrepot1.webp" alt="Avant" class="slider-img slider-img-before" />
+              </div>
+              <div class="slider-overlay">
+                <span class="slider-label label-avant">Avant</span>
+                <span class="slider-label label-apres">Après</span>
+              </div>
+              <div class="slider-line"></div>
+              <div class="slider-handle"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l-4 6 4 6M13 4l4 6-4 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Entrepôt industriel</h3>
+              <p class="project-desc">Résine haute résistance anti-dérapante</p>
+              <div class="project-meta">
+                <div class="meta-item">
+                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+                  <div><div class="meta-label">Surface</div><div class="meta-value">350 m²</div></div>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                  <div><div class="meta-label">Ville</div><div class="meta-value">Charleroi</div></div>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+                  <div><div class="meta-label">Durée</div><div class="meta-value">5 jours</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 — Coiffeur -->
+          <div class="carousel-slide" data-slide="3">
+            <div class="transform-slider" data-slider>
+              <img loading="lazy" src="apres.webp" alt="Après" class="slider-img slider-img-after" />
+              <div class="slider-before-wrap">
+                <img loading="lazy" src="avant.webp" alt="Avant" class="slider-img slider-img-before" />
+              </div>
+              <div class="slider-overlay">
+                <span class="slider-label label-avant">Avant</span>
+                <span class="slider-label label-apres">Après</span>
+              </div>
+              <div class="slider-line"></div>
+              <div class="slider-handle"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l-4 6 4 6M13 4l4 6-4 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Salon de coiffure</h3>
+              <p class="project-desc">Sol époxy effet marbré gris argenté</p>
+              <div class="project-meta">
+                <div class="meta-item">
+                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+                  <div><div class="meta-label">Surface</div><div class="meta-value">65 m²</div></div>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                  <div><div class="meta-label">Ville</div><div class="meta-value">Ixelles</div></div>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+                  <div><div class="meta-label">Durée</div><div class="meta-value">2 jours</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="carousel-dots">
+          <div class="carousel-arrow" id="carouselPrev">&#8249;</div>
+          <div class="dot active" data-dot="0"></div>
+          <div class="dot" data-dot="1"></div>
+          <div class="dot" data-dot="2"></div>
+          <div class="dot" data-dot="3"></div>
+          <div class="carousel-arrow" id="carouselNext">&#8250;</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════ EXIGENCE TECHNIQUE ═══════ -->
+  <section id="technique" class="snap-section">
+    <div class="section-inner">
+      <div class="technique-header">
+        <h2 class="section-title">Notre exigence technique</h2>
+        <p class="section-sub" style="margin: 0 auto;">Un savoir-faire professionnel qui garantit la durabilité et la qualité de votre sol</p>
+      </div>
+      <div class="technique-container">
+        <div class="technique-content">
+          <div class="technique-steps">
+            <div class="technique-step">
+              <div class="step-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+              <div class="step-text">
+                <h3>Préparation mécanique du support</h3>
+                <p>Ponçage diamant et aspiration industrielle pour une adhérence optimale</p>
+              </div>
+            </div>
+            <div class="technique-step">
+              <div class="step-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6M12 22v-6M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M2 12h6M22 12h-6M4.93 19.07l4.24-4.24M14.83 9.17l4.24-4.24"/></svg></div>
+              <div class="step-text">
+                <h3>Application primaire haute adhérence</h3>
+                <p>Primaire époxy professionnel Chemtec pour sceller le support</p>
+              </div>
+            </div>
+            <div class="technique-step">
+              <div class="step-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <div class="step-text">
+                <h3>Résine professionnelle haute résistance</h3>
+                <p>Époxy bi-composant Chemtec, résistant aux chocs, rayures et produits chimiques</p>
+              </div>
+            </div>
+            <div class="technique-step">
+              <div class="step-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+              <div class="step-text">
+                <h3>Finition brillante ou satinée</h3>
+                <p>Vernis de protection UV avec effet miroir ou mat selon votre projet</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="technique-visual">
+          <img loading="lazy" src="equipehorizontale.webp" alt="Équipe professionnelle Epoxya" class="technique-img" />
+          <div class="guarantee-badge">
+            <span class="num">10 ans</span>
+            <span class="txt">de garantie</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════ AVANTAGES ═══════ -->
+  <section id="avantages" class="snap-section">
+    <div class="section-inner">
+      <div class="avantages-container">
+        <h2 class="section-title">Pourquoi choisir l'époxy Chemtec</h2>
+        <p class="section-sub" style="margin: 0 auto;">Des avantages concrets pour votre quotidien</p>
+        <div class="avantages-grid">
+          <div class="avantage-card">
+            <div class="avantage-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+            <h3>Résistance extrême</h3>
+            <p>Supporte le trafic intense, les chocs, les rayures et les produits chimiques sans s'abîmer</p>
+          </div>
+          <div class="avantage-card">
+            <div class="avantage-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+            <h3>Entretien minimal</h3>
+            <p>Un simple coup de serpillière suffit. Aucun traitement spécial requis, gain de temps garanti</p>
+          </div>
+          <div class="avantage-card">
+            <div class="avantage-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M11 3l1 6h6"/><path d="M2 9h20"/><path d="M13 3l-1 6H6"/></svg></div>
+            <h3>Esthétique premium</h3>
+            <p>Finitions brillantes ou satinées, effets métalliques personnalisables pour un rendu spectaculaire</p>
+          </div>
+        </div>
+        <a href="#devis" class="btn-primary" style="display: inline-flex;">Recevoir un devis gratuit</a>
+        <p style="margin-top: 12px; font-size: 0.8rem; color: var(--text-secondary);">Réponse sous 24h &bull; Sans engagement</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════ DOMAINES ═══════ -->
+  <section id="domaines" class="snap-section">
+    <div class="section-inner">
+      <div class="domaines-container">
+        <h2 class="section-title">Nos domaines d'expertise</h2>
+        <p class="section-sub" style="margin: 0 auto;">Solutions adaptées à chaque type de projet</p>
+        <div class="domaines-grid">
+          <div class="domaine-card">
+            <img loading="lazy" src="garage2.webp" alt="Sol époxy garage résidentiel" class="domaine-card-img" />
+            <div class="domaine-card-body">
+              <div class="domaine-header">
+                <div class="domaine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+                <h3>Résidentiel</h3>
+              </div>
+              <p>Garages, sous-sols, terrasses. Transformez vos espaces privés en lieux design et fonctionnels.</p>
+              <ul class="domaine-features">
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Finitions personnalisées</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Résistance aux taches d'huile</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Valorisation immobilière</li>
+              </ul>
+            </div>
+          </div>
+          <div class="domaine-card">
+            <img loading="lazy" src="shoowroom2.webp" alt="Sol époxy showroom commercial" class="domaine-card-img" />
+            <div class="domaine-card-body">
+              <div class="domaine-header">
+                <div class="domaine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+                <h3>Commercial</h3>
+              </div>
+              <p>Showrooms, boutiques, restaurants. Créez une expérience client mémorable avec un sol d'exception.</p>
+              <ul class="domaine-features">
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Effets métalliques premium</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Hygiène maximale</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Image de marque renforcée</li>
+              </ul>
+            </div>
+          </div>
+          <div class="domaine-card">
+            <img loading="lazy" src="entrepot2.webp" alt="Sol époxy entrepôt industriel" class="domaine-card-img" />
+            <div class="domaine-card-body">
+              <div class="domaine-header">
+                <div class="domaine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><path d="M9 20v-6h6v6"/></svg></div>
+                <h3>Industriel</h3>
+              </div>
+              <p>Entrepôts, ateliers, usines. Des sols qui résistent aux contraintes les plus extrêmes.</p>
+              <ul class="domaine-features">
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Trafic intensif supporté</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Résistance chimique totale</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Sécurité antidérapante</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: 48px;">
+          <a href="#devis" class="btn-primary" style="display: inline-flex;">Recevoir un devis gratuit</a>
+          <p style="margin-top: 12px; font-size: 0.8rem; color: var(--text-secondary);">Réponse sous 24h &bull; Sans engagement</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════ TARIFS ═══════ -->
+  <section id="tarifs" class="snap-section">
+    <div class="section-inner">
+      <div class="tarifs-container">
+        <p class="section-label">Tarifs indicatifs</p>
+        <h2 class="section-title">Des prix transparents</h2>
+        <p class="section-sub" style="margin: 0 auto;">Estimations indicatives selon le type de projet. Chaque devis est personnalisé gratuitement.</p>
+        <div class="tarifs-grid">
+
+          <div class="tarif-card">
+            <h3 class="tarif-type">Résidentiel</h3>
+            <p class="tarif-desc">Garages, sous-sols, terrasses</p>
+            <div class="tarif-price">35-55 <span>/m²</span></div>
+            <p class="tarif-unit">HT selon finition</p>
+            <ul class="tarif-features">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Préparation du support incluse</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Résine Chemtec certifiée</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Finition brillante ou satinée</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Garantie 10 ans</li>
+            </ul>
+            <a href="#devis" class="tarif-cta tarif-cta-secondary">Demander un devis</a>
+          </div>
+
+          <div class="tarif-card popular">
+            <div class="tarif-badge">Le plus demande</div>
+            <h3 class="tarif-type">Commercial</h3>
+            <p class="tarif-desc">Showrooms, boutiques, restaurants</p>
+            <div class="tarif-price">55-85 <span>/m²</span></div>
+            <p class="tarif-unit">HT selon finition</p>
+            <ul class="tarif-features">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Tout le résidentiel inclus</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Effets métalliques disponibles</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Couleurs personnalisées</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Visite technique offerte</li>
+            </ul>
+            <a href="#devis" class="tarif-cta tarif-cta-primary">Demander un devis</a>
+          </div>
+
+          <div class="tarif-card">
+            <h3 class="tarif-type">Industriel</h3>
+            <p class="tarif-desc">Entrepôts, ateliers, usines</p>
+            <div class="tarif-price">45-75 <span>/m²</span></div>
+            <p class="tarif-unit">HT selon surface et contraintes</p>
+            <ul class="tarif-features">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Résistance chimique renforcée</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Traitement anti-dérapant</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Grandes surfaces (500m²+)</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Intervention week-end possible</li>
+            </ul>
+            <a href="#devis" class="tarif-cta tarif-cta-secondary">Demander un devis</a>
+          </div>
+
+        </div>
+        <p class="tarif-note">Les tarifs varient selon l'état du support existant, la surface totale, la finition choisie et l'accessibilité du chantier. Chaque projet fait l'objet d'une visite technique gratuite et d'un devis détaillé sans engagement.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════ PARTENAIRE ═══════ -->
+  <section id="partenaire">
+    <div class="partenaire-container">
+      <p class="section-label">Partenariat exclusif</p>
+      <h2 class="section-title">Partenaire officiel Chemtec</h2>
+      <div class="partenaire-box">
+        <p>Chemtec est le pionnier belge de l'époxy depuis plus de 30 ans. Nous utilisons exclusivement leurs produits professionnels pour garantir une qualité irréprochable et une durabilité maximale.</p>
+        <div class="certif-grid">
+          <div class="certif-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg> Certification professionnelle</div>
+          <div class="certif-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Formation continue</div>
+          <div class="certif-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Garantie fabricant</div>
+        </div>
+      </div>
+      <div style="margin-top: 28px;">
+        <a href="#devis" class="btn-primary" style="display: inline-flex;">Recevoir un devis gratuit</a>
+        <p style="margin-top: 10px; font-size: 0.8rem; color: var(--text-secondary);">Réponse sous 24h &bull; Sans engagement</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ TÉMOIGNAGES ═══════ -->
+  <section id="temoignages">
+    <div class="section-inner">
+      <div class="temoignages-container">
+        <h2 class="section-title">Ce que disent nos clients</h2>
+        <div class="rating-display">
+          <span class="rating-number">4.9/5</span>
+        </div>
+        <div class="temoignages-grid">
+          <div class="temoin-card">
+            <div class="temoin-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg></div>
+            <p class="temoin-text">"Travail impeccable ! Mon garage est méconnaissable. L'équipe d'Epoxya a été professionnelle du début à la fin."</p>
+            <div class="temoin-author">
+              <div class="temoin-avatar">MD</div>
+              <div>
+                <div class="temoin-name">Marc Dubois</div>
+                <div class="temoin-role">Propriétaire de garage, Bruxelles</div>
+                <div class="temoin-project">Garage 50m²</div>
+              </div>
+            </div>
+          </div>
+          <div class="temoin-card">
+            <div class="temoin-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg></div>
+            <p class="temoin-text">"Le sol époxy a complètement transformé notre espace commercial. Nos clients adorent l'effet métallique."</p>
+            <div class="temoin-author">
+              <div class="temoin-avatar">SL</div>
+              <div>
+                <div class="temoin-name">Sophie Laurent</div>
+                <div class="temoin-role">Gérante de showroom, Liège</div>
+                <div class="temoin-project">Showroom 120m²</div>
+              </div>
+            </div>
+          </div>
+          <div class="temoin-card">
+            <div class="temoin-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg></div>
+            <p class="temoin-text">"Excellente résistance dans notre entrepôt. Le sol supporte parfaitement le trafic intense quotidien."</p>
+            <div class="temoin-author">
+              <div class="temoin-avatar">JM</div>
+              <div>
+                <div class="temoin-name">Jean-Pierre Martin</div>
+                <div class="temoin-role">Directeur d'usine, Charleroi</div>
+                <div class="temoin-project">Entrepôt 350m²</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════ FAQ ═══════ -->
+  <section id="faq" class="snap-section">
+    <div class="section-inner">
+      <div class="faq-container">
+        <h2 class="section-title">Questions fréquentes</h2>
+        <p class="section-sub" style="margin: 0 auto;">Tout ce que vous devez savoir sur les sols époxy</p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">Quelle est la durée de vie d'un sol époxy ? <span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Un sol époxy bien entretenu dure entre 15 et 25 ans. Avec nos produits Chemtec et notre garantie de 10 ans, votre investissement est protégé sur le long terme.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Combien de temps faut-il pour poser un sol époxy ? <span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>La durée dépend de la surface et du type de finition. En moyenne, comptez 2 à 5 jours pour un projet résidentiel et 5 à 10 jours pour un projet commercial ou industriel.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Quel est le coût d'un sol époxy ? <span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Le prix varie en fonction de la surface, de la préparation nécessaire et de la finition choisie. Demandez un devis gratuit pour obtenir un prix précis adapté à votre projet.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">L'époxy est-il adapté à tous les types de sols ? <span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>L'époxy s'applique principalement sur les dalles en béton. Nous évaluons chaque support lors de notre visite technique pour garantir une adhérence optimale.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Comment entretenir un sol époxy ? <span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Un simple nettoyage à l'eau avec une serpillière suffit. Aucun produit spécial n'est nécessaire. Le sol résiste aux taches et se nettoie très facilement.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Intervenez-vous partout en Belgique ? <span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Oui, nous intervenons sur l'ensemble de la Belgique. Nous nous déplaçons gratuitement pour évaluer votre projet sur site.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════ DEVIS ═══════ -->
+  <section id="devis" class="snap-section">
+    <div class="section-inner">
+      <div class="devis-container">
+        <h2 class="section-title">Demandez votre devis gratuit</h2>
+        <p class="section-sub" style="margin: 0 auto;">Réponse garantie sous 24h &bull; Sans engagement</p>
+        <form class="devis-form" action="https://formsubmit.co/info@epoxya.be" method="POST">
+          <input type="hidden" name="_subject" value="Nouvelle demande de devis - Epoxya" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value="" id="formRedirect" />
+          <input type="text" name="_honey" style="display:none" />
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Nom complet *</label>
+              <input type="text" name="nom" placeholder="Votre nom" required />
+            </div>
+            <div class="form-group">
+              <label>Téléphone *</label>
+              <input type="tel" name="telephone" placeholder="+32 ..." required />
+            </div>
+            <div class="form-group">
+              <label>Email *</label>
+              <input type="email" name="email" placeholder="votre@email.be" required />
+            </div>
+            <div class="form-group">
+              <label>Ville / Code postal *</label>
+              <input type="text" name="ville" placeholder="Ex: Bruxelles, 1000" required />
+            </div>
+            <div class="form-group">
+              <label>Type de projet *</label>
+              <select name="type_projet" required>
+                <option value="">Sélectionnez</option>
+                <option>Garage résidentiel</option>
+                <option>Espace commercial</option>
+                <option>Site industriel</option>
+                <option>Autre projet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Surface approximative (m²) *</label>
+              <input type="number" name="surface_m2" placeholder="Ex: 50" required />
+            </div>
+            <div class="form-group full">
+              <label>Décrivez votre projet (optionnel)</label>
+              <textarea name="description" placeholder="Parlez-nous de votre projet, vos attentes, vos contraintes..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="form-submit">Recevoir mon devis gratuit</button>
+          <p class="form-consent">En soumettant ce formulaire, vous acceptez d'être contacté par Epoxya concernant votre projet.</p>
+        </form>
+        <div class="direct-contact">
+          <p>Ou contactez-nous directement</p>
+          <div class="contact-links">
+            <a href="tel:+32486804357" class="contact-link">
+              <div class="contact-link-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+              +32 486 804 357
+            </a>
+            <a href="mailto:info@epoxya.be" class="contact-link">
+              <div class="contact-link-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              info@epoxya.be
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ NEWSLETTER ═══════ -->
+  <section id="newsletter">
+    <div class="newsletter-container">
+      <h2 class="section-title">Restez informé</h2>
+      <p class="section-sub" style="margin: 0 auto;">Conseils, tendances et inspirations sols époxy. Pas de spam, juste du contenu utile.</p>
+      <form class="newsletter-form" id="newsletterForm" onsubmit="return subscribeNewsletter(event)">
+        <input type="email" id="newsletterEmail" placeholder="Votre adresse email" required />
+        <button type="submit">S'abonner</button>
+      </form>
+      <p class="newsletter-success" id="newsletterSuccess">Merci ! Vous êtes inscrit à notre newsletter.</p>
+    </div>
+  </section>
+
+  <!-- ═══════ FOOTER ═══════ -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo.webp" alt="Epoxya" />
+        <p>Spécialistes des revêtements de sols en époxy de haute qualité en Belgique.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#domaines">Sols résidentiels</a>
+        <a href="#domaines">Sols commerciaux</a>
+        <a href="#domaines">Sols industriels</a>
+        <a href="#devis">Devis gratuit</a>
+      </div>
+      <div class="footer-col">
+        <h4>Entreprise</h4>
+        <a href="#technique">À propos</a>
+        <a href="#transformations">Nos réalisations</a>
+        <a href="#partenaire">Partenaire Chemtec</a>
+        <a href="#avantages">Garanties</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:info@epoxya.be">info@epoxya.be</a>
+        <a href="tel:+32486804357">+32 486 804 357</a>
+        <a href="#">Belgique</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 Epoxya. Tous droits réservés.</span>
+      <div class="footer-legal">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="confidentialite.html">Politique de confidentialité</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════ BACK TO TOP ═══════ -->
+  <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- ═══════ COOKIE BANNER ═══════ -->
+  <div class="cookie-banner" id="cookieBanner">
+    <p>Ce site utilise des cookies pour améliorer votre expérience. <a href="confidentialite.html">En savoir plus</a></p>
+    <div class="cookie-btns">
+      <button class="cookie-decline" onclick="closeCookieBanner(false)">Refuser</button>
+      <button class="cookie-accept" onclick="closeCookieBanner(true)">Accepter</button>
+    </div>
+  </div>
+
+  <!-- ═══════ CHATBOT ═══════ -->
+  <button class="chatbot-btn" id="chatbotBtn" aria-label="Ouvrir le chat">
+    <div class="chatbot-pulse"></div>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+      <div class="chatbot-avatar">EA</div>
+      <div class="chatbot-header-text">
+        <h4>Epoxya Assistant</h4>
+        <p>En ligne</p>
+      </div>
+      <button class="chatbot-close" id="chatbotClose">&#10005;</button>
+    </div>
+    <div class="chatbot-body" id="chatbotBody"></div>
+    <div class="chatbot-input">
+      <input type="text" id="chatbotInput" placeholder="Votre message..." />
+      <button id="chatbotSend">Envoyer</button>
+    </div>
+  </div>
+
+  <script>
+    /* ══════════════════════════════════════
+       CHATBOT FAQ
+    ══════════════════════════════════════ */
+    (function() {
+      const btn = document.getElementById('chatbotBtn');
+      const win = document.getElementById('chatbotWindow');
+      const closeBtn = document.getElementById('chatbotClose');
+      const body = document.getElementById('chatbotBody');
+      const input = document.getElementById('chatbotInput');
+      const sendBtn = document.getElementById('chatbotSend');
+
+      const FAQ = [
+        { q: "Combien co\u00fbte un sol \u00e9poxy ?", keywords: ["prix", "cout", "coute", "tarif", "cher", "budget", "combien"],
+          a: "Nos tarifs indicatifs : R\u00e9sidentiel 35-55\u00a0\u20ac/m\u00b2, Commercial 55-85\u00a0\u20ac/m\u00b2, Industriel 45-75\u00a0\u20ac/m\u00b2 (HT). Le prix exact d\u00e9pend de la surface, de l'\u00e9tat du support et de la finition. On peut vous faire un devis gratuit !" },
+        { q: "Quelle est la dur\u00e9e de vie ?", keywords: ["duree", "vie", "dure", "longtemps", "ans", "garantie"],
+          a: "Un sol \u00e9poxy bien entretenu dure entre 15 et 25 ans. Nous offrons une garantie de 10 ans sur tous nos projets avec les produits Chemtec." },
+        { q: "Combien de temps pour la pose ?", keywords: ["temps", "pose", "jours", "delai", "duree pose", "installation"],
+          a: "En moyenne : 2-3 jours pour un garage, 3-5 jours pour un showroom, 5-10 jours pour un site industriel. On peut aussi intervenir le week-end si n\u00e9cessaire." },
+        { q: "O\u00f9 intervenez-vous ?", keywords: ["zone", "region", "belgique", "bruxelles", "liege", "ou", "secteur"],
+          a: "Nous intervenons sur toute la Belgique : Bruxelles, Wallonie et Flandre. La visite technique sur site est gratuite, o\u00f9 que vous soyez !" },
+        { q: "Comment entretenir un sol \u00e9poxy ?", keywords: ["entretien", "entretenir", "nettoyer", "nettoyage", "serpilliere"],
+          a: "C'est tr\u00e8s simple ! Un coup de serpilli\u00e8re humide suffit. Pas besoin de produit sp\u00e9cial. Le sol r\u00e9siste aux taches et se nettoie en un instant." },
+        { q: "C'est quoi Chemtec ?", keywords: ["chemtec", "partenaire", "produit", "marque", "certification"],
+          a: "Chemtec est le pionnier belge de l'\u00e9poxy depuis plus de 30 ans. Nous sommes partenaire officiel certifi\u00e9 et utilisons exclusivement leurs produits professionnels pour une qualit\u00e9 maximale." },
+        { q: "Je voudrais un devis", keywords: ["devis", "contact", "rendez-vous", "rdv", "appeler", "contacter"],
+          a: "Avec plaisir ! Vous pouvez remplir notre formulaire de devis juste en bas, ou nous appeler directement au +32 486 804 357. R\u00e9ponse garantie sous 24h !" },
+      ];
+
+      function addMsg(text, type) {
+        const div = document.createElement('div');
+        div.className = 'chat-msg ' + (type === 'bot' ? 'chat-bot' : 'chat-user');
+        div.textContent = text;
+        body.appendChild(div);
+        body.scrollTop = body.scrollHeight;
+      }
+
+      function addOptions(options) {
+        const wrap = document.createElement('div');
+        wrap.className = 'chat-options';
+        options.forEach(opt => {
+          const b = document.createElement('button');
+          b.className = 'chat-option-btn';
+          b.textContent = opt.q;
+          b.addEventListener('click', () => {
+            wrap.remove();
+            addMsg(opt.q, 'user');
+            setTimeout(() => addMsg(opt.a, 'bot'), 400);
+            setTimeout(() => showFollowUp(), 1200);
+          });
+          wrap.appendChild(b);
+        });
+        body.appendChild(wrap);
+        body.scrollTop = body.scrollHeight;
+      }
+
+      function showFollowUp() {
+        addMsg("Autre question ?", 'bot');
+        addOptions([
+          ...FAQ.slice(0, 4),
+          { q: "Je voudrais un devis", a: "Avec plaisir ! Vous pouvez remplir notre formulaire de devis juste en bas, ou nous appeler directement au +32 486 804 357. Reponse garantie sous 24h !" }
+        ]);
+      }
+
+      function findAnswer(text) {
+        const lower = text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        for (const faq of FAQ) {
+          for (const kw of faq.keywords) {
+            if (lower.includes(kw)) return faq.a;
+          }
+        }
+        return null;
+      }
+
+      function handleUserInput() {
+        const text = input.value.trim();
+        if (!text) return;
+        addMsg(text, 'user');
+        input.value = '';
+        const answer = findAnswer(text);
+        setTimeout(() => {
+          if (answer) {
+            addMsg(answer, 'bot');
+            setTimeout(() => showFollowUp(), 1000);
+          } else {
+            addMsg("Je ne suis pas s\u00fbr de comprendre. Laissez-moi vos coordonn\u00e9es et un coll\u00e8gue vous recontactera sous 24h, ou appelez-nous au +32 486 804 357 !", 'bot');
+            setTimeout(() => {
+              addOptions([
+                { q: "Je voudrais un devis", a: "Remplissez le formulaire en bas de page ou appelez le +32 486 804 357. R\u00e9ponse sous 24h !" },
+                { q: "Voir les tarifs", a: "Nos tarifs indicatifs : R\u00e9sidentiel 35-55\u00a0\u20ac/m\u00b2, Commercial 55-85\u00a0\u20ac/m\u00b2, Industriel 45-75\u00a0\u20ac/m\u00b2 (HT). Le devis est gratuit et personnalis\u00e9 !" }
+              ]);
+            }, 600);
+          }
+        }, 500);
+      }
+
+      function initChat() {
+        body.innerHTML = '';
+        addMsg("Bonjour ! Je suis l'assistant Epoxya. Comment puis-je vous aider ?", 'bot');
+        setTimeout(() => {
+          addOptions(FAQ.slice(0, 5));
+        }, 600);
+      }
+
+      btn.addEventListener('click', () => {
+        win.classList.toggle('visible');
+        if (win.classList.contains('visible') && body.children.length === 0) {
+          initChat();
+        }
+      });
+      closeBtn.addEventListener('click', () => win.classList.remove('visible'));
+      sendBtn.addEventListener('click', handleUserInput);
+      input.addEventListener('keydown', (e) => { if (e.key === 'Enter') handleUserInput(); });
+    })();
+  </script>
+
+  <script>
+    /* ══════════════════════════════════════
+       FRAME SEQUENCE — PRELOAD
+    ══════════════════════════════════════ */
+    const FRAME_COUNT = 121;
+    const frames = [];
+    let loadedFrames = 0;
+    const loaderBar = document.getElementById('loaderBar');
+    const loaderPct = document.getElementById('loaderPct');
+    const loader = document.getElementById('loader');
+
+    function onAllFramesLoaded() {
+      drawFrame(0);
+      loader.style.opacity = '0';
+      setTimeout(() => { loader.style.display = 'none'; }, 700);
+    }
+
+    for (let i = 1; i <= FRAME_COUNT; i++) {
+      const img = new Image();
+      img.src = `frames/frame_${String(i).padStart(4, '0')}.webp`;
+      img.onload = img.onerror = () => {
+        loadedFrames++;
+        const pct = (loadedFrames / FRAME_COUNT) * 100;
+        loaderBar.style.width = pct + '%';
+        loaderPct.textContent = Math.floor(pct) + '%';
+        if (loadedFrames === FRAME_COUNT) onAllFramesLoaded();
+      };
+      frames.push(img);
+    }
+
+    /* ══════════════════════════════════════
+       CANVAS SETUP
+    ══════════════════════════════════════ */
+    const canvas = document.getElementById('frameCanvas');
+    const ctx = canvas.getContext('2d');
+    let currentFrame = -1;
+
+    function resizeCanvas() {
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = window.innerWidth * dpr;
+      canvas.height = window.innerHeight * dpr;
+      canvas.style.width = window.innerWidth + 'px';
+      canvas.style.height = window.innerHeight + 'px';
+      if (currentFrame >= 0) drawFrame(currentFrame);
+    }
+
+    function drawFrame(index) {
+      const img = frames[index];
+      if (!img || !img.complete || img.naturalWidth === 0) return;
+      const cw = canvas.width, ch = canvas.height;
+      ctx.clearRect(0, 0, cw, ch);
+      const imgRatio = img.naturalWidth / img.naturalHeight;
+      const canvasRatio = cw / ch;
+      let drawW, drawH, drawX, drawY;
+      if (canvasRatio > imgRatio) { drawW = cw; drawH = cw / imgRatio; }
+      else { drawH = ch; drawW = ch * imgRatio; }
+      drawX = (cw - drawW) / 2;
+      drawY = (ch - drawH) / 2;
+      ctx.drawImage(img, drawX, drawY, drawW, drawH);
+    }
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    /* ══════════════════════════════════════
+       SCROLL ANIMATION HANDLER
+       - Hero text: visible 0-40%, fades 40-50%, gone 50%+
+       - Stats: invisible 0-50%, fades in 50-65%, visible 65%+
+       - Frames play throughout 0-100%
+    ══════════════════════════════════════ */
+    const scrollSection = document.querySelector('.scroll-animation');
+    const heroOverlay = document.getElementById('heroOverlay');
+    const statsOverlay = document.getElementById('statsOverlay');
+    const scrollHint = document.getElementById('scrollHint');
+    const scrollProgressEl = document.getElementById('scrollProgress');
+    let ticking = false;
+    let statsCountStarted = false;
+
+    function updateScrollAnimation(progress) {
+      // --- Hero overlay: visible 0-35%, fading 35-50%, gone 50%+ ---
+      if (progress <= 0.35) {
+        heroOverlay.style.opacity = '1';
+        heroOverlay.style.transform = 'translateY(0)';
+        heroOverlay.style.pointerEvents = 'auto';
+      } else if (progress <= 0.50) {
+        const t = (progress - 0.35) / 0.15; // 0→1 over 35-50%
+        heroOverlay.style.opacity = (1 - t).toString();
+        heroOverlay.style.transform = `translateY(${-t * 50}px)`;
+        heroOverlay.style.pointerEvents = 'none';
+      } else {
+        heroOverlay.style.opacity = '0';
+        heroOverlay.style.transform = 'translateY(-50px)';
+        heroOverlay.style.pointerEvents = 'none';
+      }
+
+      // --- Stats overlay: hidden 0-50%, fading in 50-65%, visible 65%+ ---
+      if (progress <= 0.50) {
+        statsOverlay.style.opacity = '0';
+        statsOverlay.style.transform = 'translateY(40px)';
+        statsOverlay.style.pointerEvents = 'none';
+      } else if (progress <= 0.65) {
+        const t = (progress - 0.50) / 0.15; // 0→1 over 50-65%
+        statsOverlay.style.opacity = t.toString();
+        statsOverlay.style.transform = `translateY(${40 - t * 40}px)`;
+        statsOverlay.style.pointerEvents = t > 0.5 ? 'auto' : 'none';
+        // Start count-up when stats begin to appear
+        if (!statsCountStarted) {
+          statsCountStarted = true;
+          startStatsCount();
+        }
+      } else {
+        statsOverlay.style.opacity = '1';
+        statsOverlay.style.transform = 'translateY(0)';
+        statsOverlay.style.pointerEvents = 'auto';
+        if (!statsCountStarted) {
+          statsCountStarted = true;
+          startStatsCount();
+        }
+      }
+
+      // --- Scroll hint: fades away quickly ---
+      if (progress <= 0.05) {
+        scrollHint.style.opacity = (1 - progress / 0.05).toString();
+      } else {
+        scrollHint.style.opacity = '0';
+      }
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+
+          // Global progress bar
+          const maxScroll = document.body.scrollHeight - window.innerHeight;
+          scrollProgressEl.style.width = ((scrollY / maxScroll) * 100) + '%';
+
+          // Progress within scroll-animation section
+          const rect = scrollSection.getBoundingClientRect();
+          const scrollableHeight = scrollSection.offsetHeight - window.innerHeight;
+          const progress = Math.min(1, Math.max(0, -rect.top / scrollableHeight));
+
+          // Frame animation — plays across full 0→100%
+          const frameIndex = Math.min(FRAME_COUNT - 1, Math.floor(progress * FRAME_COUNT));
+          if (frameIndex !== currentFrame) {
+            currentFrame = frameIndex;
+            drawFrame(frameIndex);
+          }
+
+          // Content overlays
+          updateScrollAnimation(progress);
+
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    /* ══════════════════════════════════════
+       STATS COUNT-UP
+    ══════════════════════════════════════ */
+    function easeOutExpo(t) { return t === 1 ? 1 : 1 - Math.pow(2, -10 * t); }
+
+    function countUp(el, target, suffix, duration) {
+      const start = performance.now();
+      function update(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const current = easeOutExpo(progress) * target;
+        el.innerHTML = (target % 1 === 0 ? Math.floor(current) : current.toFixed(1)) + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+        else el.innerHTML = target + suffix;
+      }
+      requestAnimationFrame(update);
+    }
+
+    function startStatsCount() {
+      document.querySelectorAll('.stat-overlay-item').forEach((item, i) => {
+        setTimeout(() => {
+          countUp(
+            item.querySelector('.stat-overlay-number'),
+            parseFloat(item.dataset.target),
+            item.dataset.suffix || '',
+            2200
+          );
+        }, i * 200);
+      });
+    }
+
+    /* ══════════════════════════════════════
+       SECTION REVEAL — INTERSECTION OBSERVER
+    ══════════════════════════════════════ */
+    const snapSections = document.querySelectorAll('.snap-section');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -5% 0px'
+    });
+
+    snapSections.forEach(s => sectionObserver.observe(s));
+
+    /* ══════════════════════════════════════
+       FAQ ACCORDION
+    ══════════════════════════════════════ */
+    /* Set form redirect to current page */
+    document.getElementById('formRedirect').value = window.location.href.split('#')[0] + '#devis';
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
+
+    /* ══════════════════════════════════════
+       CAROUSEL — prev / next / dots
+    ══════════════════════════════════════ */
+    let currentSlide = 0;
+    let isAnimating = false;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot[data-dot]');
+    const totalSlides = slides.length;
+
+    function goToSlide(index, direction) {
+      if (isAnimating) return;
+      const newIndex = (index + totalSlides) % totalSlides;
+      if (newIndex === currentSlide) return;
+
+      isAnimating = true;
+
+      if (direction === undefined) {
+        direction = newIndex > currentSlide ? 'left' : 'right';
+      }
+
+      const oldSlide = slides[currentSlide];
+      const newSlide = slides[newIndex];
+
+      // Clean previous animation classes
+      slides.forEach(s => {
+        s.classList.remove('slide-in-right', 'slide-in-left', 'is-entering', 'is-leaving');
+      });
+
+      // Sync slider widths before animating so before-image is correct
+      syncAllSliders();
+
+      // Old slide stays in place (keeps layout height)
+      oldSlide.classList.add('is-leaving');
+
+      // New slide enters on top via absolute position
+      newSlide.classList.add('is-entering');
+      newSlide.style.setProperty('--slide-from', direction === 'left' ? '100%' : '-100%');
+      newSlide.classList.add(direction === 'left' ? 'slide-in-right' : 'slide-in-left');
+
+      // Update dots
+      dots[currentSlide].classList.remove('active');
+      dots[newIndex].classList.add('active');
+
+      // After animation ends, clean up
+      setTimeout(() => {
+        oldSlide.classList.remove('active', 'is-leaving');
+        newSlide.classList.remove('slide-in-right', 'slide-in-left', 'is-entering');
+        newSlide.classList.add('active');
+        currentSlide = newIndex;
+        syncAllSliders();
+        isAnimating = false;
+      }, 550);
+    }
+
+    document.getElementById('carouselPrev').addEventListener('click', () => goToSlide(currentSlide - 1, 'right'));
+    document.getElementById('carouselNext').addEventListener('click', () => goToSlide(currentSlide + 1, 'left'));
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const target = parseInt(dot.dataset.dot);
+        goToSlide(target, target > currentSlide ? 'left' : 'right');
+      });
+    });
+
+    /* ══════════════════════════════════════
+       BEFORE/AFTER SLIDERS (all slides)
+    ══════════════════════════════════════ */
+    let isDragging = false;
+    let activeSlider = null;
+
+    function syncAllSliders() {
+      /* Get width from the active/visible slider */
+      const activeS = document.querySelector('.carousel-slide.active .transform-slider[data-slider]');
+      const w = activeS ? activeS.offsetWidth : 900;
+      /* Apply to ALL sliders (even hidden ones) via CSS variable */
+      document.querySelectorAll('.transform-slider[data-slider]').forEach(s => {
+        s.style.setProperty('--slider-w', w + 'px');
+      });
+    }
+    syncAllSliders();
+    window.addEventListener('resize', syncAllSliders);
+
+    function updateSliderAtPos(sliderEl, x) {
+      const rect = sliderEl.getBoundingClientRect();
+      const pct = Math.min(98, Math.max(2, ((x - rect.left) / rect.width) * 100));
+      sliderEl.querySelector('.slider-handle').style.left = pct + '%';
+      sliderEl.querySelector('.slider-line').style.left = pct + '%';
+      sliderEl.querySelector('.slider-before-wrap').style.width = pct + '%';
+    }
+
+    document.addEventListener('mousedown', (e) => {
+      const handle = e.target.closest('.slider-handle');
+      if (handle) {
+        isDragging = true;
+        activeSlider = handle.closest('.transform-slider');
+        e.preventDefault();
+      }
+    });
+    document.addEventListener('touchstart', (e) => {
+      const handle = e.target.closest('.slider-handle');
+      if (handle) {
+        isDragging = true;
+        activeSlider = handle.closest('.transform-slider');
+      }
+    }, { passive: true });
+
+    window.addEventListener('mousemove', (e) => {
+      if (isDragging && activeSlider) updateSliderAtPos(activeSlider, e.clientX);
+    });
+    window.addEventListener('touchmove', (e) => {
+      if (isDragging && activeSlider) updateSliderAtPos(activeSlider, e.touches[0].clientX);
+    }, { passive: true });
+    window.addEventListener('mouseup', () => { isDragging = false; activeSlider = null; });
+    window.addEventListener('touchend', () => { isDragging = false; activeSlider = null; });
+
+    /* Click anywhere on a slider to jump handle */
+    document.querySelectorAll('.transform-slider[data-slider]').forEach(s => {
+      s.addEventListener('click', (e) => {
+        if (e.target.closest('.slider-handle')) return;
+        updateSliderAtPos(s, e.clientX);
+      });
+    });
+
+    /* ══════════════════════════════════════
+       NEWSLETTER — save to localStorage + Formsubmit
+    ══════════════════════════════════════ */
+    function subscribeNewsletter(e) {
+      e.preventDefault();
+      const email = document.getElementById('newsletterEmail').value.trim();
+      if (!email) return false;
+
+      // Save to localStorage
+      let subs = JSON.parse(localStorage.getItem('epoxya_subscribers') || '[]');
+      if (!subs.includes(email)) {
+        subs.push(email);
+        localStorage.setItem('epoxya_subscribers', JSON.stringify(subs));
+      }
+
+      // Send to Formsubmit as backup
+      fetch('https://formsubmit.co/ajax/info@epoxya.be', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          _subject: 'Nouvel abonné newsletter - Epoxya',
+          email: email,
+          source: 'newsletter'
+        })
+      }).catch(() => {});
+
+      // Show success
+      document.getElementById('newsletterForm').style.display = 'none';
+      document.getElementById('newsletterSuccess').classList.add('show');
+      return false;
+    }
+
+    /* ══════════════════════════════════════
+       BACK TO TOP
+    ══════════════════════════════════════ */
+    const backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', () => {
+      backTop.classList.toggle('visible', window.scrollY > 600);
+    }, { passive: true });
+
+    /* ══════════════════════════════════════
+       COOKIE BANNER
+    ══════════════════════════════════════ */
+    function closeCookieBanner(accepted) {
+      document.getElementById('cookieBanner').classList.remove('show');
+      localStorage.setItem('epoxya_cookies', accepted ? 'accepted' : 'declined');
+    }
+    if (!localStorage.getItem('epoxya_cookies')) {
+      setTimeout(() => document.getElementById('cookieBanner').classList.add('show'), 2000);
+    }
+
+    /* ══════════════════════════════════════
+       SERVICE WORKER
+    ══════════════════════════════════════ */
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').catch(() => {});
+    }
+  </script>
+</body>
+</html>
