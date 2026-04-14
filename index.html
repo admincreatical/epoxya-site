@@ -70,7 +70,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
   <style>
 .skip-link { position: absolute; top: -40px; left: 0; background: var(--accent, #00e5cc); color: #000; padding: 8px 16px; z-index: 10000; font-weight: 600; text-decoration: none; } .skip-link:focus { top: 0; }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
@@ -94,6 +95,7 @@
       color: var(--text-primary);
       font-family: 'Archivo', sans-serif;
       overflow-x: hidden;
+      font-synthesis: none;
     }
 
     ::selection { background: var(--accent); color: #000; }
@@ -105,10 +107,12 @@
     /* ─── Scroll Progress ─── */
     #scrollProgress {
       position: fixed; top: 0; left: 0;
-      height: 3px; width: 0%;
+      height: 3px; width: 100%;
       background: linear-gradient(90deg, var(--accent), var(--accent-light));
       z-index: 10000;
-      transition: width 0.1s linear;
+      transform-origin: left;
+      transform: scaleX(0);
+      transition: transform 0.1s linear;
     }
 
     /* ─── Loader ─── */
@@ -235,6 +239,7 @@
       font-weight: 700; line-height: 1.08;
       letter-spacing: -0.02em; margin-bottom: 24px;
       text-shadow: 0 2px 40px rgba(0,0,0,0.5);
+      min-height: 2.4em;
     }
     .hero-title em {
       font-style: normal;
@@ -1271,7 +1276,7 @@
 
   <!-- Loader -->
   <div id="loader">
-    <img src="logo.webp" class="loader-logo" alt="Epoxya" />
+    <img src="logo.webp" class="loader-logo" alt="Epoxya" width="400" height="82" />
     <p class="loader-text">Chargement</p>
     <div class="loader-bar-track">
       <div class="loader-bar-fill" id="loaderBar"></div>
@@ -1283,7 +1288,7 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#" class="nav-logo" aria-label="Accueil Epoxya" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
-        <img src="logo.webp" alt="Epoxya" />
+        <img src="logo.webp" alt="Epoxya" width="400" height="82" />
       </a>
       <div class="nav-right">
         <a href="tel:+32486804357" class="nav-phone">
@@ -1376,9 +1381,9 @@
           <!-- Slide 1 — Showroom (premier) -->
           <div class="carousel-slide active" data-slide="0">
             <div class="transform-slider" data-slider>
-              <img loading="lazy" src="shoowroom2.webp" alt="Après" class="slider-img slider-img-after" />
+              <img loading="lazy" src="shoowroom2.webp" alt="Après" class="slider-img slider-img-after" width="900" height="503" />
               <div class="slider-before-wrap">
-                <img loading="lazy" src="shoowroom1.webp" alt="Avant" class="slider-img slider-img-before" />
+                <img loading="lazy" src="shoowroom1.webp" alt="Avant" class="slider-img slider-img-before" width="900" height="600" />
               </div>
               <div class="slider-overlay">
                 <span class="slider-label label-avant">Avant</span>
@@ -1410,9 +1415,9 @@
           <!-- Slide 2 — Garage -->
           <div class="carousel-slide" data-slide="1">
             <div class="transform-slider" data-slider>
-              <img loading="lazy" src="garage2.webp" alt="Après" class="slider-img slider-img-after" />
+              <img loading="lazy" src="garage2.webp" alt="Après" class="slider-img slider-img-after" width="900" height="503" />
               <div class="slider-before-wrap">
-                <img loading="lazy" src="garage1.webp" alt="Avant" class="slider-img slider-img-before" />
+                <img loading="lazy" src="garage1.webp" alt="Avant" class="slider-img slider-img-before" width="1600" height="1067" />
               </div>
               <div class="slider-overlay">
                 <span class="slider-label label-avant">Avant</span>
@@ -1444,9 +1449,9 @@
           <!-- Slide 3 — Entrepôt -->
           <div class="carousel-slide" data-slide="2">
             <div class="transform-slider" data-slider>
-              <img loading="lazy" src="entrepot2.webp" alt="Après" class="slider-img slider-img-after" />
+              <img loading="lazy" src="entrepot2.webp" alt="Après" class="slider-img slider-img-after" width="1600" height="1067" />
               <div class="slider-before-wrap">
-                <img loading="lazy" src="entrepot1.webp" alt="Avant" class="slider-img slider-img-before" />
+                <img loading="lazy" src="entrepot1.webp" alt="Avant" class="slider-img slider-img-before" width="1600" height="1067" />
               </div>
               <div class="slider-overlay">
                 <span class="slider-label label-avant">Avant</span>
@@ -1478,9 +1483,9 @@
           <!-- Slide 4 — Coiffeur -->
           <div class="carousel-slide" data-slide="3">
             <div class="transform-slider" data-slider>
-              <img loading="lazy" src="apres.webp" alt="Après" class="slider-img slider-img-after" />
+              <img loading="lazy" src="apres.webp" alt="Après" class="slider-img slider-img-after" width="1600" height="899" />
               <div class="slider-before-wrap">
-                <img loading="lazy" src="avant.webp" alt="Avant" class="slider-img slider-img-before" />
+                <img loading="lazy" src="avant.webp" alt="Avant" class="slider-img slider-img-before" width="1600" height="900" />
               </div>
               <div class="slider-overlay">
                 <span class="slider-label label-avant">Avant</span>
@@ -1566,7 +1571,7 @@
           </div>
         </div>
         <div class="technique-visual">
-          <img loading="lazy" src="equipehorizontale.webp" alt="Équipe professionnelle Epoxya" class="technique-img" />
+          <img loading="lazy" src="equipehorizontale.webp" alt="Équipe professionnelle Epoxya" class="technique-img" width="900" height="600" />
           <div class="guarantee-badge">
             <span class="num">10 ans</span>
             <span class="txt">de garantie</span>
@@ -1617,7 +1622,7 @@
         <p class="section-sub" style="margin: 0 auto;">Solutions adaptées à chaque type de projet</p>
         <div class="domaines-grid">
           <div class="domaine-card">
-            <img loading="lazy" src="garage2.webp" alt="Sol époxy garage résidentiel" class="domaine-card-img" />
+            <img loading="lazy" src="garage2.webp" alt="Sol époxy garage résidentiel" class="domaine-card-img" width="900" height="503" />
             <div class="domaine-card-body">
               <div class="domaine-header">
                 <div class="domaine-icon"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
@@ -1632,7 +1637,7 @@
             </div>
           </div>
           <div class="domaine-card">
-            <img loading="lazy" src="shoowroom2.webp" alt="Sol époxy showroom commercial" class="domaine-card-img" />
+            <img loading="lazy" src="shoowroom2.webp" alt="Sol époxy showroom commercial" class="domaine-card-img" width="900" height="503" />
             <div class="domaine-card-body">
               <div class="domaine-header">
                 <div class="domaine-icon"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
@@ -1647,7 +1652,7 @@
             </div>
           </div>
           <div class="domaine-card">
-            <img loading="lazy" src="entrepot2.webp" alt="Sol époxy entrepôt industriel" class="domaine-card-img" />
+            <img loading="lazy" src="entrepot2.webp" alt="Sol époxy entrepôt industriel" class="domaine-card-img" width="1600" height="1067" />
             <div class="domaine-card-body">
               <div class="domaine-header">
                 <div class="domaine-icon"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><path d="M9 20v-6h6v6"/></svg></div>
@@ -1930,7 +1935,7 @@
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="logo.webp" alt="Epoxya" />
+        <img src="logo.webp" alt="Epoxya" width="400" height="82" />
         <p>Spécialistes des revêtements de sols en époxy de haute qualité en Belgique.</p>
       </div>
       <div class="footer-col">
@@ -2251,7 +2256,7 @@
 
           // Global progress bar
           const maxScroll = document.body.scrollHeight - window.innerHeight;
-          scrollProgressEl.style.width = ((scrollY / maxScroll) * 100) + '%';
+          scrollProgressEl.style.transform = 'scaleX(' + (scrollY / maxScroll) + ')';
 
           // Progress within scroll-animation section
           const rect = scrollSection.getBoundingClientRect();
