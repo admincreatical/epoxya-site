@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
+    .skip-link { position: absolute; top: -40px; left: 0; background: var(--accent, #00e5cc); color: #000; padding: 8px 16px; z-index: 10000; font-weight: 600; text-decoration: none; } .skip-link:focus { top: 0; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
     :root {
       --accent: #00e5cc;
       --accent-rgb: 0, 229, 204;
@@ -167,9 +169,11 @@
 </head>
 <body>
 
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo"><img src="logo.webp" alt="Epoxya" /></a>
+      <a href="index.html" class="nav-logo" aria-label="Accueil Epoxya"><img src="logo.webp" alt="Epoxya" /></a>
       <div class="nav-right">
         <a href="blog.html" class="nav-blog">Blog</a>
         <a href="index.html#devis" class="nav-cta">Devis gratuit</a>
@@ -177,11 +181,14 @@
     </div>
   </nav>
 
+  <main id="main-content">
   <img src="" alt="" class="article-hero" id="articleHero" style="display:none;" />
 
   <div class="article-container" id="articleContainer">
     <div class="article-loading" id="articleLoading">Chargement de l'article...</div>
   </div>
+
+  </main>
 
   <footer>
     <div class="footer-simple">
@@ -217,7 +224,7 @@
 
           container.innerHTML = `
             <a href="blog.html" class="article-back">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
               Retour au blog
             </a>
             <div class="article-meta">

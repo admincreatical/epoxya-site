@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
+    .skip-link { position: absolute; top: -40px; left: 0; background: var(--accent, #00e5cc); color: #000; padding: 8px 16px; z-index: 10000; font-weight: 600; text-decoration: none; } .skip-link:focus { top: 0; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
     :root {
       --accent: #00e5cc;
       --accent-rgb: 0, 229, 204;
@@ -178,15 +180,17 @@
 </head>
 <body>
 
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
   <!-- Navbar -->
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
+      <a href="index.html" class="nav-logo" aria-label="Accueil Epoxya">
         <img src="logo.webp" alt="Epoxya" />
       </a>
       <div class="nav-right">
         <a href="tel:+32486804357" class="nav-phone">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           +32 486 804 357
         </a>
         <a href="blog.html" class="nav-blog">Blog</a>
@@ -196,6 +200,7 @@
   </nav>
 
   <!-- Blog Hero -->
+  <main id="main-content">
   <div class="blog-hero">
     <h1>Blog Epoxya</h1>
     <p>Conseils, tendances et inspirations pour vos projets de sols époxy en Belgique</p>
@@ -210,6 +215,8 @@
 
   <!-- Articles Grid -->
   <div class="blog-grid" id="blogGrid"></div>
+
+  </main>
 
   <!-- Footer -->
   <footer>

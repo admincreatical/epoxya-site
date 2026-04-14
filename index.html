@@ -72,7 +72,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
-:root {
+.skip-link { position: absolute; top: -40px; left: 0; background: var(--accent, #00e5cc); color: #000; padding: 8px 16px; z-index: 10000; font-weight: 600; text-decoration: none; } .skip-link:focus { top: 0; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+    :root {
       --accent: #00e5cc;
       --accent-rgb: 0, 229, 204;
       --accent-light: #33ffee;
@@ -1263,6 +1265,8 @@
 </head>
 <body>
 
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
   <div id="scrollProgress"></div>
 
   <!-- Loader -->
@@ -1278,12 +1282,12 @@
   <!-- Navbar -->
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="#" class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+      <a href="#" class="nav-logo" aria-label="Accueil Epoxya" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
         <img src="logo.webp" alt="Epoxya" />
       </a>
       <div class="nav-right">
         <a href="tel:+32486804357" class="nav-phone">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           +32 486 804 357
         </a>
         <a href="blog.html" class="nav-blog">Blog</a>
@@ -1297,6 +1301,7 @@
        300vh de scroll, sticky 100vh
        Hero disparait à 50%, Stats apparaissent après
        ═══════════════════════════════════════ -->
+  <main id="main-content">
   <section class="scroll-animation">
     <div class="scroll-sticky">
 
@@ -1318,9 +1323,9 @@
           <a href="#transformations" class="btn-secondary">Voir nos réalisations</a>
         </div>
         <div class="hero-trust" style="margin-top: 40px;">
-          <div class="trust-item"><div class="trust-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Réponse sous 24h</div>
-          <div class="trust-item"><div class="trust-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Conseils personnalisés</div>
-          <div class="trust-item"><div class="trust-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Devis gratuit sans engagement</div>
+          <div class="trust-item"><div class="trust-check"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Réponse sous 24h</div>
+          <div class="trust-item"><div class="trust-check"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Conseils personnalisés</div>
+          <div class="trust-item"><div class="trust-check"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Devis gratuit sans engagement</div>
         </div>
       </div>
 
@@ -1380,22 +1385,22 @@
                 <span class="slider-label label-apres">Après</span>
               </div>
               <div class="slider-line"></div>
-              <div class="slider-handle"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l-4 6 4 6M13 4l4 6-4 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="slider-handle"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l-4 6 4 6M13 4l4 6-4 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             </div>
             <div class="project-info">
               <h3 class="project-title">Showroom commercial</h3>
               <p class="project-desc">Sol époxy effet métallique bleu miroir</p>
               <div class="project-meta">
                 <div class="meta-item">
-                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+                  <span class="meta-icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
                   <div><div class="meta-label">Surface</div><div class="meta-value">120 m²</div></div>
                 </div>
                 <div class="meta-item">
-                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                  <span class="meta-icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
                   <div><div class="meta-label">Ville</div><div class="meta-value">Paris</div></div>
                 </div>
                 <div class="meta-item">
-                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+                  <span class="meta-icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
                   <div><div class="meta-label">Durée</div><div class="meta-value">3 jours</div></div>
                 </div>
               </div>
@@ -1414,22 +1419,22 @@
                 <span class="slider-label label-apres">Après</span>
               </div>
               <div class="slider-line"></div>
-              <div class="slider-handle"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l-4 6 4 6M13 4l4 6-4 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="slider-handle"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l-4 6 4 6M13 4l4 6-4 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             </div>
             <div class="project-info">
               <h3 class="project-title">Garage résidentiel</h3>
               <p class="project-desc">Transformation complète avec finition brillante</p>
               <div class="project-meta">
                 <div class="meta-item">
-                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+                  <span class="meta-icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
                   <div><div class="meta-label">Surface</div><div class="meta-value">45 m²</div></div>
                 </div>
                 <div class="meta-item">
-                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                  <span class="meta-icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
                   <div><div class="meta-label">Ville</div><div class="meta-value">Bruxelles</div></div>
                 </div>
                 <div class="meta-item">
-                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+                  <span class="meta-icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
                   <div><div class="meta-label">Durée</div><div class="meta-value">2 jours</div></div>
                 </div>
               </div>
@@ -1448,22 +1453,22 @@
                 <span class="slider-label label-apres">Après</span>
               </div>
               <div class="slider-line"></div>
-              <div class="slider-handle"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l-4 6 4 6M13 4l4 6-4 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="slider-handle"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l-4 6 4 6M13 4l4 6-4 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             </div>
             <div class="project-info">
               <h3 class="project-title">Entrepôt industriel</h3>
               <p class="project-desc">Résine haute résistance anti-dérapante</p>
               <div class="project-meta">
                 <div class="meta-item">
-                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+                  <span class="meta-icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
                   <div><div class="meta-label">Surface</div><div class="meta-value">350 m²</div></div>
                 </div>
                 <div class="meta-item">
-                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                  <span class="meta-icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
                   <div><div class="meta-label">Ville</div><div class="meta-value">Charleroi</div></div>
                 </div>
                 <div class="meta-item">
-                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+                  <span class="meta-icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
                   <div><div class="meta-label">Durée</div><div class="meta-value">5 jours</div></div>
                 </div>
               </div>
@@ -1482,22 +1487,22 @@
                 <span class="slider-label label-apres">Après</span>
               </div>
               <div class="slider-line"></div>
-              <div class="slider-handle"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l-4 6 4 6M13 4l4 6-4 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="slider-handle"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l-4 6 4 6M13 4l4 6-4 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             </div>
             <div class="project-info">
               <h3 class="project-title">Salon de coiffure</h3>
               <p class="project-desc">Sol époxy effet marbré gris argenté</p>
               <div class="project-meta">
                 <div class="meta-item">
-                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+                  <span class="meta-icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
                   <div><div class="meta-label">Surface</div><div class="meta-value">65 m²</div></div>
                 </div>
                 <div class="meta-item">
-                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                  <span class="meta-icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
                   <div><div class="meta-label">Ville</div><div class="meta-value">Ixelles</div></div>
                 </div>
                 <div class="meta-item">
-                  <span class="meta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+                  <span class="meta-icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
                   <div><div class="meta-label">Durée</div><div class="meta-value">2 jours</div></div>
                 </div>
               </div>
@@ -1507,12 +1512,12 @@
         </div>
 
         <div class="carousel-dots">
-          <div class="carousel-arrow" id="carouselPrev">&#8249;</div>
+          <button class="carousel-arrow" id="carouselPrev" aria-label="Précédent">&#8249;</button>
           <div class="dot active" data-dot="0"></div>
           <div class="dot" data-dot="1"></div>
           <div class="dot" data-dot="2"></div>
           <div class="dot" data-dot="3"></div>
-          <div class="carousel-arrow" id="carouselNext">&#8250;</div>
+          <button class="carousel-arrow" id="carouselNext" aria-label="Suivant">&#8250;</button>
         </div>
       </div>
     </div>
@@ -1531,28 +1536,28 @@
         <div class="technique-content">
           <div class="technique-steps">
             <div class="technique-step">
-              <div class="step-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+              <div class="step-icon"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
               <div class="step-text">
                 <h3>Préparation mécanique du support</h3>
                 <p>Ponçage diamant et aspiration industrielle pour une adhérence optimale</p>
               </div>
             </div>
             <div class="technique-step">
-              <div class="step-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6M12 22v-6M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M2 12h6M22 12h-6M4.93 19.07l4.24-4.24M14.83 9.17l4.24-4.24"/></svg></div>
+              <div class="step-icon"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6M12 22v-6M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M2 12h6M22 12h-6M4.93 19.07l4.24-4.24M14.83 9.17l4.24-4.24"/></svg></div>
               <div class="step-text">
                 <h3>Application primaire haute adhérence</h3>
                 <p>Primaire époxy professionnel Chemtec pour sceller le support</p>
               </div>
             </div>
             <div class="technique-step">
-              <div class="step-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <div class="step-icon"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
               <div class="step-text">
                 <h3>Résine professionnelle haute résistance</h3>
                 <p>Époxy bi-composant Chemtec, résistant aux chocs, rayures et produits chimiques</p>
               </div>
             </div>
             <div class="technique-step">
-              <div class="step-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+              <div class="step-icon"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
               <div class="step-text">
                 <h3>Finition brillante ou satinée</h3>
                 <p>Vernis de protection UV avec effet miroir ou mat selon votre projet</p>
@@ -1581,17 +1586,17 @@
         <p class="section-sub" style="margin: 0 auto;">Des avantages concrets pour votre quotidien</p>
         <div class="avantages-grid">
           <div class="avantage-card">
-            <div class="avantage-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+            <div class="avantage-icon"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
             <h3>Résistance extrême</h3>
             <p>Supporte le trafic intense, les chocs, les rayures et les produits chimiques sans s'abîmer</p>
           </div>
           <div class="avantage-card">
-            <div class="avantage-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+            <div class="avantage-icon"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
             <h3>Entretien minimal</h3>
             <p>Un simple coup de serpillière suffit. Aucun traitement spécial requis, gain de temps garanti</p>
           </div>
           <div class="avantage-card">
-            <div class="avantage-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M11 3l1 6h6"/><path d="M2 9h20"/><path d="M13 3l-1 6H6"/></svg></div>
+            <div class="avantage-icon"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M11 3l1 6h6"/><path d="M2 9h20"/><path d="M13 3l-1 6H6"/></svg></div>
             <h3>Esthétique premium</h3>
             <p>Finitions brillantes ou satinées, effets métalliques personnalisables pour un rendu spectaculaire</p>
           </div>
@@ -1615,14 +1620,14 @@
             <img loading="lazy" src="garage2.webp" alt="Sol époxy garage résidentiel" class="domaine-card-img" />
             <div class="domaine-card-body">
               <div class="domaine-header">
-                <div class="domaine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+                <div class="domaine-icon"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
                 <h3>Résidentiel</h3>
               </div>
               <p>Garages, sous-sols, terrasses. Transformez vos espaces privés en lieux design et fonctionnels.</p>
               <ul class="domaine-features">
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Finitions personnalisées</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Résistance aux taches d'huile</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Valorisation immobilière</li>
+                <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Finitions personnalisées</li>
+                <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Résistance aux taches d'huile</li>
+                <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Valorisation immobilière</li>
               </ul>
             </div>
           </div>
@@ -1630,14 +1635,14 @@
             <img loading="lazy" src="shoowroom2.webp" alt="Sol époxy showroom commercial" class="domaine-card-img" />
             <div class="domaine-card-body">
               <div class="domaine-header">
-                <div class="domaine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+                <div class="domaine-icon"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
                 <h3>Commercial</h3>
               </div>
               <p>Showrooms, boutiques, restaurants. Créez une expérience client mémorable avec un sol d'exception.</p>
               <ul class="domaine-features">
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Effets métalliques premium</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Hygiène maximale</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Image de marque renforcée</li>
+                <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Effets métalliques premium</li>
+                <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Hygiène maximale</li>
+                <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Image de marque renforcée</li>
               </ul>
             </div>
           </div>
@@ -1645,14 +1650,14 @@
             <img loading="lazy" src="entrepot2.webp" alt="Sol époxy entrepôt industriel" class="domaine-card-img" />
             <div class="domaine-card-body">
               <div class="domaine-header">
-                <div class="domaine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><path d="M9 20v-6h6v6"/></svg></div>
+                <div class="domaine-icon"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><path d="M9 20v-6h6v6"/></svg></div>
                 <h3>Industriel</h3>
               </div>
               <p>Entrepôts, ateliers, usines. Des sols qui résistent aux contraintes les plus extrêmes.</p>
               <ul class="domaine-features">
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Trafic intensif supporté</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Résistance chimique totale</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Sécurité antidérapante</li>
+                <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Trafic intensif supporté</li>
+                <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Résistance chimique totale</li>
+                <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg> Sécurité antidérapante</li>
               </ul>
             </div>
           </div>
@@ -1682,10 +1687,10 @@
             <div class="tarif-price">35-55 <span>/m²</span></div>
             <p class="tarif-unit">HT selon finition</p>
             <ul class="tarif-features">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Préparation du support incluse</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Résine Chemtec certifiée</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Finition brillante ou satinée</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Garantie 10 ans</li>
+              <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Préparation du support incluse</li>
+              <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Résine Chemtec certifiée</li>
+              <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Finition brillante ou satinée</li>
+              <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Garantie 10 ans</li>
             </ul>
             <a href="#devis" class="tarif-cta tarif-cta-secondary">Demander un devis</a>
           </div>
@@ -1697,10 +1702,10 @@
             <div class="tarif-price">55-85 <span>/m²</span></div>
             <p class="tarif-unit">HT selon finition</p>
             <ul class="tarif-features">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Tout le résidentiel inclus</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Effets métalliques disponibles</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Couleurs personnalisées</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Visite technique offerte</li>
+              <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Tout le résidentiel inclus</li>
+              <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Effets métalliques disponibles</li>
+              <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Couleurs personnalisées</li>
+              <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Visite technique offerte</li>
             </ul>
             <a href="#devis" class="tarif-cta tarif-cta-primary">Demander un devis</a>
           </div>
@@ -1711,10 +1716,10 @@
             <div class="tarif-price">45-75 <span>/m²</span></div>
             <p class="tarif-unit">HT selon surface et contraintes</p>
             <ul class="tarif-features">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Résistance chimique renforcée</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Traitement anti-dérapant</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Grandes surfaces (500m²+)</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Intervention week-end possible</li>
+              <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Résistance chimique renforcée</li>
+              <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Traitement anti-dérapant</li>
+              <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Grandes surfaces (500m²+)</li>
+              <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Intervention week-end possible</li>
             </ul>
             <a href="#devis" class="tarif-cta tarif-cta-secondary">Demander un devis</a>
           </div>
@@ -1735,9 +1740,9 @@
       <div class="partenaire-box">
         <p>Chemtec est le pionnier belge de l'époxy depuis plus de 30 ans. Nous utilisons exclusivement leurs produits professionnels pour garantir une qualité irréprochable et une durabilité maximale.</p>
         <div class="certif-grid">
-          <div class="certif-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg> Certification professionnelle</div>
-          <div class="certif-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Formation continue</div>
-          <div class="certif-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Garantie fabricant</div>
+          <div class="certif-item"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg> Certification professionnelle</div>
+          <div class="certif-item"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Formation continue</div>
+          <div class="certif-item"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Garantie fabricant</div>
         </div>
       </div>
       <div style="margin-top: 28px;">
@@ -1757,7 +1762,7 @@
         </div>
         <div class="temoignages-grid">
           <div class="temoin-card">
-            <div class="temoin-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg></div>
+            <div class="temoin-stars"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><span class="sr-only">Note : 5 sur 5</span></div>
             <p class="temoin-text">"Travail impeccable ! Mon garage est méconnaissable. L'équipe d'Epoxya a été professionnelle du début à la fin."</p>
             <div class="temoin-author">
               <div class="temoin-avatar">MD</div>
@@ -1769,7 +1774,7 @@
             </div>
           </div>
           <div class="temoin-card">
-            <div class="temoin-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg></div>
+            <div class="temoin-stars"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><span class="sr-only">Note : 5 sur 5</span></div>
             <p class="temoin-text">"Le sol époxy a complètement transformé notre espace commercial. Nos clients adorent l'effet métallique."</p>
             <div class="temoin-author">
               <div class="temoin-avatar">SL</div>
@@ -1781,7 +1786,7 @@
             </div>
           </div>
           <div class="temoin-card">
-            <div class="temoin-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg></div>
+            <div class="temoin-stars"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="#f5a623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><span class="sr-only">Note : 5 sur 5</span></div>
             <p class="temoin-text">"Excellente résistance dans notre entrepôt. Le sol supporte parfaitement le trafic intense quotidien."</p>
             <div class="temoin-author">
               <div class="temoin-avatar">JM</div>
@@ -1807,27 +1812,27 @@
         <p class="section-sub" style="margin: 0 auto;">Tout ce que vous devez savoir sur les sols époxy</p>
         <div class="faq-list">
           <div class="faq-item">
-            <button class="faq-question">Quelle est la durée de vie d'un sol époxy ? <span class="faq-icon">+</span></button>
+            <button class="faq-question" aria-expanded="false">Quelle est la durée de vie d'un sol époxy ? <span class="faq-icon">+</span></button>
             <div class="faq-answer"><p>Un sol époxy bien entretenu dure entre 15 et 25 ans. Avec nos produits Chemtec et notre garantie de 10 ans, votre investissement est protégé sur le long terme.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-question">Combien de temps faut-il pour poser un sol époxy ? <span class="faq-icon">+</span></button>
+            <button class="faq-question" aria-expanded="false">Combien de temps faut-il pour poser un sol époxy ? <span class="faq-icon">+</span></button>
             <div class="faq-answer"><p>La durée dépend de la surface et du type de finition. En moyenne, comptez 2 à 5 jours pour un projet résidentiel et 5 à 10 jours pour un projet commercial ou industriel.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-question">Quel est le coût d'un sol époxy ? <span class="faq-icon">+</span></button>
+            <button class="faq-question" aria-expanded="false">Quel est le coût d'un sol époxy ? <span class="faq-icon">+</span></button>
             <div class="faq-answer"><p>Le prix varie en fonction de la surface, de la préparation nécessaire et de la finition choisie. Demandez un devis gratuit pour obtenir un prix précis adapté à votre projet.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-question">L'époxy est-il adapté à tous les types de sols ? <span class="faq-icon">+</span></button>
+            <button class="faq-question" aria-expanded="false">L'époxy est-il adapté à tous les types de sols ? <span class="faq-icon">+</span></button>
             <div class="faq-answer"><p>L'époxy s'applique principalement sur les dalles en béton. Nous évaluons chaque support lors de notre visite technique pour garantir une adhérence optimale.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-question">Comment entretenir un sol époxy ? <span class="faq-icon">+</span></button>
+            <button class="faq-question" aria-expanded="false">Comment entretenir un sol époxy ? <span class="faq-icon">+</span></button>
             <div class="faq-answer"><p>Un simple nettoyage à l'eau avec une serpillière suffit. Aucun produit spécial n'est nécessaire. Le sol résiste aux taches et se nettoie très facilement.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-question">Intervenez-vous partout en Belgique ? <span class="faq-icon">+</span></button>
+            <button class="faq-question" aria-expanded="false">Intervenez-vous partout en Belgique ? <span class="faq-icon">+</span></button>
             <div class="faq-answer"><p>Oui, nous intervenons sur l'ensemble de la Belgique. Nous nous déplaçons gratuitement pour évaluer votre projet sur site.</p></div>
           </div>
         </div>
@@ -1851,24 +1856,24 @@
           <input type="text" name="_honey" style="display:none" />
           <div class="form-grid">
             <div class="form-group">
-              <label>Nom complet *</label>
-              <input type="text" name="nom" placeholder="Votre nom" required />
+              <label for="field-nom">Nom complet *</label>
+              <input type="text" name="nom" id="field-nom" placeholder="Votre nom" required />
             </div>
             <div class="form-group">
-              <label>Téléphone *</label>
-              <input type="tel" name="telephone" placeholder="+32 ..." required />
+              <label for="field-telephone">Téléphone *</label>
+              <input type="tel" name="telephone" id="field-telephone" placeholder="+32 ..." required />
             </div>
             <div class="form-group">
-              <label>Email *</label>
-              <input type="email" name="email" placeholder="votre@email.be" required />
+              <label for="field-email">Email *</label>
+              <input type="email" name="email" id="field-email" placeholder="votre@email.be" required />
             </div>
             <div class="form-group">
-              <label>Ville / Code postal *</label>
-              <input type="text" name="ville" placeholder="Ex: Bruxelles, 1000" required />
+              <label for="field-ville">Ville / Code postal *</label>
+              <input type="text" name="ville" id="field-ville" placeholder="Ex: Bruxelles, 1000" required />
             </div>
             <div class="form-group">
-              <label>Type de projet *</label>
-              <select name="type_projet" required>
+              <label for="field-type-projet">Type de projet *</label>
+              <select name="type_projet" id="field-type-projet" required>
                 <option value="">Sélectionnez</option>
                 <option>Garage résidentiel</option>
                 <option>Espace commercial</option>
@@ -1877,12 +1882,12 @@
               </select>
             </div>
             <div class="form-group">
-              <label>Surface approximative (m²) *</label>
-              <input type="number" name="surface_m2" placeholder="Ex: 50" required />
+              <label for="field-surface">Surface approximative (m²) *</label>
+              <input type="number" name="surface_m2" id="field-surface" placeholder="Ex: 50" required />
             </div>
             <div class="form-group full">
-              <label>Décrivez votre projet (optionnel)</label>
-              <textarea name="description" placeholder="Parlez-nous de votre projet, vos attentes, vos contraintes..."></textarea>
+              <label for="field-description">Décrivez votre projet (optionnel)</label>
+              <textarea name="description" id="field-description" placeholder="Parlez-nous de votre projet, vos attentes, vos contraintes..."></textarea>
             </div>
           </div>
           <button type="submit" class="form-submit">Recevoir mon devis gratuit</button>
@@ -1892,11 +1897,11 @@
           <p>Ou contactez-nous directement</p>
           <div class="contact-links">
             <a href="tel:+32486804357" class="contact-link">
-              <div class="contact-link-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+              <div class="contact-link-icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
               +32 486 804 357
             </a>
             <a href="mailto:info@epoxya.be" class="contact-link">
-              <div class="contact-link-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div class="contact-link-icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
               info@epoxya.be
             </a>
           </div>
@@ -1911,12 +1916,15 @@
       <h2 class="section-title">Restez informé</h2>
       <p class="section-sub" style="margin: 0 auto;">Conseils, tendances et inspirations sols époxy. Pas de spam, juste du contenu utile.</p>
       <form class="newsletter-form" id="newsletterForm" onsubmit="return subscribeNewsletter(event)">
+        <label for="newsletterEmail" class="sr-only">Votre adresse email</label>
         <input type="email" id="newsletterEmail" placeholder="Votre adresse email" required />
         <button type="submit">S'abonner</button>
       </form>
       <p class="newsletter-success" id="newsletterSuccess">Merci ! Vous êtes inscrit à notre newsletter.</p>
     </div>
   </section>
+
+  </main>
 
   <!-- ═══════ FOOTER ═══════ -->
   <footer>
@@ -1956,8 +1964,8 @@
   </footer>
 
   <!-- ═══════ BACK TO TOP ═══════ -->
-  <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  <button class="back-top" id="backTop" aria-label="Retour en haut" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
   <!-- ═══════ COOKIE BANNER ═══════ -->
@@ -1972,7 +1980,7 @@
   <!-- ═══════ CHATBOT ═══════ -->
   <button class="chatbot-btn" id="chatbotBtn" aria-label="Ouvrir le chat">
     <div class="chatbot-pulse"></div>
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
   </button>
 
   <div class="chatbot-window" id="chatbotWindow">
@@ -1982,10 +1990,11 @@
         <h4>Epoxya Assistant</h4>
         <p>En ligne</p>
       </div>
-      <button class="chatbot-close" id="chatbotClose">&#10005;</button>
+      <button class="chatbot-close" id="chatbotClose" aria-label="Fermer le chat">&#10005;</button>
     </div>
     <div class="chatbot-body" id="chatbotBody"></div>
     <div class="chatbot-input">
+      <label for="chatbotInput" class="sr-only">Votre message</label>
       <input type="text" id="chatbotInput" placeholder="Votre message..." />
       <button id="chatbotSend">Envoyer</button>
     </div>
@@ -2323,8 +2332,14 @@
       btn.addEventListener('click', () => {
         const item = btn.parentElement;
         const wasOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-        if (!wasOpen) item.classList.add('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!wasOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
       });
     });
 
