@@ -958,6 +958,14 @@
       color: var(--accent); font-size: 0.9rem; font-weight: 500;
     }
     .newsletter-success.show { display: block; }
+    .newsletter-error {
+      display: none; margin-top: 16px;
+      color: #ff6b6b; font-size: 0.9rem; font-weight: 500;
+    }
+    .newsletter-error.show { display: block; }
+    .newsletter-form button:disabled {
+      opacity: 0.6; cursor: not-allowed; box-shadow: none;
+    }
     @media (max-width: 520px) {
       .newsletter-form { flex-direction: column; }
     }
@@ -1928,12 +1936,13 @@
     <div class="newsletter-container">
       <h2 class="section-title">Restez informé</h2>
       <p class="section-sub" style="margin: 0 auto;">Conseils, tendances et inspirations sols époxy. Pas de spam, juste du contenu utile.</p>
-      <form class="newsletter-form" id="newsletterForm" onsubmit="return subscribeNewsletter(event)">
+      <form class="newsletter-form" id="newsletterForm" onsubmit="return subscribeNewsletterBrevo(event)">
         <label for="newsletterEmail" class="sr-only">Votre adresse email</label>
         <input type="email" id="newsletterEmail" placeholder="Votre adresse email" required />
         <button type="submit">S'abonner</button>
       </form>
       <p class="newsletter-success" id="newsletterSuccess">Merci ! Vous êtes inscrit à notre newsletter.</p>
+      <p class="newsletter-error" id="newsletterError" role="alert" aria-live="polite"></p>
     </div>
   </section>
 
@@ -2479,36 +2488,74 @@
     });
 
     /* ══════════════════════════════════════
-       NEWSLETTER — save to localStorage + Formsubmit
+       NEWSLETTER — Brevo via Cloudflare Pages Function
     ══════════════════════════════════════ */
-    function subscribeNewsletter(e) {
+    async function subscribeNewsletterBrevo(e) {
       e.preventDefault();
-      const email = document.getElementById('newsletterEmail').value.trim();
-      if (!email) return false;
+      const form = document.getElementById('newsletterForm');
+      const input = document.getElementById('newsletterEmail');
+      const button = form.querySelector('button[type="submit"]');
+      const successEl = document.getElementById('newsletterSuccess');
+      const errorEl = document.getElementById('newsletterError');
 
-      // Save to localStorage
-      let subs = JSON.parse(localStorage.getItem('epoxya_subscribers') || '[]');
-      if (!subs.includes(email)) {
-        subs.push(email);
-        localStorage.setItem('epoxya_subscribers', JSON.stringify(subs));
+      const email = input.value.trim();
+      errorEl.classList.remove('show');
+
+      if (!email || !email.includes('@') || !email.includes('.')) {
+        errorEl.textContent = 'Veuillez entrer un email valide.';
+        errorEl.classList.add('show');
+        return false;
       }
 
-      // Send to Formsubmit as backup
-      fetch('https://formsubmit.co/ajax/epoxya.belgium@gmail.com', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          _subject: 'Nouvel abonné newsletter - Epoxya',
-          email: email,
-          source: 'newsletter'
-        })
-      }).catch(() => {});
+      const originalText = button.textContent;
+      button.disabled = true;
+      button.textContent = 'Inscription en cours...';
 
-      // Show success
-      document.getElementById('newsletterForm').style.display = 'none';
-      document.getElementById('newsletterSuccess').classList.add('show');
+      try {
+        const resp = await fetch('/newsletter-subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+        const data = await resp.json().catch(() => ({}));
+
+        if (data && data.success === true) {
+          form.style.display = 'none';
+          successEl.textContent = 'Vérifiez votre boîte email pour confirmer votre inscription.';
+          successEl.classList.add('show');
+        } else if (data && data.error === 'already_subscribed') {
+          errorEl.textContent = 'Cet email est déjà inscrit à notre newsletter.';
+          errorEl.classList.add('show');
+          button.disabled = false;
+          button.textContent = originalText;
+        } else {
+          errorEl.textContent = 'Une erreur est survenue, réessayez plus tard.';
+          errorEl.classList.add('show');
+          button.disabled = false;
+          button.textContent = originalText;
+        }
+      } catch {
+        errorEl.textContent = 'Une erreur est survenue, réessayez plus tard.';
+        errorEl.classList.add('show');
+        button.disabled = false;
+        button.textContent = originalText;
+      }
       return false;
     }
+
+    /* Affiche un message si l'utilisateur revient depuis le lien de confirmation Brevo */
+    (function handleNewsletterConfirmation() {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('newsletter') === 'confirme') {
+        const form = document.getElementById('newsletterForm');
+        const successEl = document.getElementById('newsletterSuccess');
+        if (form && successEl) {
+          form.style.display = 'none';
+          successEl.textContent = 'Inscription confirmée, merci !';
+          successEl.classList.add('show');
+        }
+      }
+    })();
 
     /* ══════════════════════════════════════
        BACK TO TOP
