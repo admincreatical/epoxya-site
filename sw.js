@@ -1,12 +1,17 @@
-const CACHE_NAME = 'epoxya-v1';
+const CACHE_NAME = 'epoxya-v2';
 const ASSETS = [
   '/',
   '/index.html',
   '/blog.html',
   '/article.html',
   '/logo.webp',
-  '/favicon-32.png',
+  '/favicon.ico',
   '/favicon-16.png',
+  '/favicon-32.png',
+  '/apple-touch-icon.png',
+  '/android-chrome-192.png',
+  '/android-chrome-512.png',
+  '/manifest.json',
 ];
 
 self.addEventListener('install', e => {
