@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E133YGKSHF"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-E133YGKSHF');
-  </script>
+  <!-- GA4 chargé via Tarteaucitron après consentement RGPD (init en bas du <head>) -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mentions légales — Epoxya</title>
@@ -27,6 +20,42 @@
     nav a{display:flex;align-items:center;gap:10px;text-decoration:none}
     nav img{height:36px}
   </style>
+  <!-- Tarteaucitron — gestion du consentement cookies (RGPD) -->
+  <script src="/assets/tarteaucitron/tarteaucitron.js"></script>
+  <script>
+    tarteaucitron.init({
+        "privacyUrl": "/confidentialite.html",
+        "bodyPosition": "bottom",
+        "hashtag": "#tarteaucitron",
+        "cookieName": "tarteaucitron",
+        "orientation": "middle",
+        "groupServices": false,
+        "showDetailsOnClick": true,
+        "serviceDefaultState": "wait",
+        "showAlertSmall": false,
+        "cookieslist": true,
+        "closePopup": false,
+        "showIcon": true,
+        "iconPosition": "BottomRight",
+        "adblocker": false,
+        "DenyAllCta": true,
+        "AcceptAllCta": true,
+        "highPrivacy": true,
+        "handleBrowserDNTRequest": false,
+        "removeCredit": false,
+        "moreInfoLink": true,
+        "useExternalCss": false,
+        "useExternalJs": false,
+        "readmoreLink": "/confidentialite.html",
+        "mandatory": true,
+        "mandatoryCta": true,
+        "googleConsentMode": true,
+        "partnersList": false
+    });
+
+    tarteaucitron.user.gtagUa = 'G-E133YGKSHF';
+    (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+  </script>
 </head>
 <body>
   <nav><a href="index.html"><img src="logo.webp" alt="Epoxya" /></a></nav>
