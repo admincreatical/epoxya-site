@@ -1,0 +1,209 @@
+/* =========================================================================
+   Tarteaucitron — surcharge visuelle Epoxya
+   Aligne le bandeau de consentement sur la charte graphique du site.
+   Tous les sélecteurs reprennent les IDs/classes par défaut de Tarteaucitron
+   et utilisent !important pour gagner contre la feuille par défaut.
+   ========================================================================= */
+
+/* Typographie globale du widget */
+#tarteaucitronRoot,
+#tarteaucitronRoot * {
+  font-family: 'Space Grotesk', 'Archivo', system-ui, sans-serif !important;
+  letter-spacing: 0 !important;
+}
+
+/* -------------------------------------------------------------------------
+   Bandeau principal (orientation "middle" => modale centrée)
+   ------------------------------------------------------------------------- */
+html body #tarteaucitronRoot.tarteaucitronSize-middle div#tarteaucitronAlertBig,
+html body #tarteaucitronRoot div#tarteaucitronAlertBig {
+  background: #0a0a0a !important;
+  color: #f0f0f0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  border-radius: 20px !important;
+  max-width: 600px !important;
+  width: 92% !important;
+  min-width: 0 !important;
+  padding: 36px 32px !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6),
+              0 0 80px rgba(0, 229, 204, 0.08) !important;
+}
+
+/* Neutraliser l'en-tête "☝️ 🍪" injecté en ::before */
+#tarteaucitronRoot.tarteaucitronSize-middle #tarteaucitronAlertBig::before,
+#tarteaucitronRoot.tarteaucitronSize-popup  #tarteaucitronAlertBig::before,
+#tarteaucitronRoot #tarteaucitronAlertBig::before {
+  content: "" !important;
+  display: none !important;
+}
+
+/* Texte du bandeau */
+#tarteaucitronAlertBig #tarteaucitronDisclaimerAlert,
+#tarteaucitronAlertBig #tarteaucitronDisclaimerAlert strong {
+  color: #f0f0f0 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.55 !important;
+  font-weight: 400 !important;
+  margin-bottom: 18px !important;
+  display: block !important;
+}
+
+/* -------------------------------------------------------------------------
+   Boutons d'action — Tout accepter / Tout refuser / Personnaliser
+   Tous strictement identiques pour conformité CNIL (pas de hiérarchie visuelle)
+   ------------------------------------------------------------------------- */
+#tarteaucitronRoot #tarteaucitronAlertBig button.tarteaucitronCTAButton,
+#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronPersonalize2,
+#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronAllAllowed2,
+#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronAllDenied2,
+#tarteaucitronRoot.tarteaucitronSize-middle button.tarteaucitronCTAButton,
+#tarteaucitronRoot.tarteaucitronSize-popup  button.tarteaucitronCTAButton {
+  background: #00e5cc !important;
+  color: #000 !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 14px 28px !important;
+  margin: 6px 6px !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: 0.9rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em !important;
+  text-transform: none !important;
+  cursor: pointer !important;
+  box-shadow: 0 0 28px rgba(0, 229, 204, 0.35) !important;
+  transition: background 0.25s ease, transform 0.2s ease,
+              box-shadow 0.25s ease !important;
+  min-width: 160px !important;
+  text-align: center !important;
+}
+
+#tarteaucitronRoot #tarteaucitronAlertBig button.tarteaucitronCTAButton:hover,
+#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronPersonalize2:hover,
+#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronAllAllowed2:hover,
+#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronAllDenied2:hover {
+  background: #33ffee !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 0 36px rgba(0, 229, 204, 0.55) !important;
+}
+
+#tarteaucitronRoot #tarteaucitronAlertBig button.tarteaucitronCTAButton:focus-visible {
+  outline: 2px solid #ffffff !important;
+  outline-offset: 2px !important;
+}
+
+/* Conteneur des boutons : alignement flex propre */
+#tarteaucitronAlertBig {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+#tarteaucitronAlertBig #tarteaucitronDisclaimerAlert {
+  flex: 0 0 auto !important;
+}
+
+@media (min-width: 600px) {
+  #tarteaucitronAlertBig {
+    flex-direction: column !important;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Lien "Politique de confidentialité"
+   ------------------------------------------------------------------------- */
+#tarteaucitronAlertBig #tarteaucitronPrivacyUrl,
+#tarteaucitronAlertBig #tarteaucitronPrivacyUrlDialog,
+#tarteaucitron #tarteaucitronPrivacyUrl,
+#tarteaucitron #tarteaucitronPrivacyUrlDialog {
+  background: transparent !important;
+  color: #00e5cc !important;
+  padding: 0 !important;
+  margin-top: 14px !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  display: inline-block !important;
+  min-width: 0 !important;
+  transition: color 0.2s ease !important;
+}
+#tarteaucitronAlertBig #tarteaucitronPrivacyUrl:hover,
+#tarteaucitronAlertBig #tarteaucitronPrivacyUrlDialog:hover {
+  color: #ffffff !important;
+  background: transparent !important;
+}
+
+/* -------------------------------------------------------------------------
+   Icône flottante (réouvrir le panneau)
+   ------------------------------------------------------------------------- */
+#tarteaucitronIcon {
+  background: transparent !important;
+}
+#tarteaucitronIcon #tarteaucitronManager {
+  background: #00e5cc !important;
+  color: #000 !important;
+  border-radius: 999px !important;
+  padding: 10px 16px !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  box-shadow: 0 6px 20px rgba(0, 229, 204, 0.35) !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: background 0.2s ease, transform 0.2s ease !important;
+}
+#tarteaucitronIcon #tarteaucitronManager:hover {
+  background: #33ffee !important;
+  transform: translateY(-1px) !important;
+}
+#tarteaucitronIcon #tarteaucitronManager img {
+  display: none !important;
+}
+
+/* -------------------------------------------------------------------------
+   Panneau de personnalisation (modal détaillé)
+   ------------------------------------------------------------------------- */
+#tarteaucitron #tarteaucitronServices,
+#tarteaucitron #tarteaucitronClosePanel {
+  background: #0f1115 !important;
+  color: #f0f0f0 !important;
+}
+#tarteaucitron #tarteaucitronServices {
+  border-radius: 20px !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+}
+#tarteaucitron #tarteaucitronServices_mandatory .tarteaucitronTitle button,
+#tarteaucitron .tarteaucitronMainLine,
+#tarteaucitron .tarteaucitronBorder,
+#tarteaucitron #tarteaucitronInfo {
+  background: #0a0a0a !important;
+  color: #f0f0f0 !important;
+  border-color: rgba(255, 255, 255, 0.07) !important;
+}
+#tarteaucitron #tarteaucitronClosePanel {
+  background: #00e5cc !important;
+  color: #000 !important;
+  font-weight: 700 !important;
+}
+#tarteaucitronRoot .tarteaucitronAllow,
+#tarteaucitronRoot .tarteaucitronDeny {
+  background: #00e5cc !important;
+  color: #000 !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+}
+#tarteaucitronRoot .tarteaucitronAllow:not(.tarteaucitronIsSelected),
+#tarteaucitronRoot .tarteaucitronDeny:not(.tarteaucitronIsSelected) {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #f0f0f0 !important;
+}
+
+/* -------------------------------------------------------------------------
+   Masquage explicite d'éventuels emojis résiduels
+   ------------------------------------------------------------------------- */
+.tarteaucitron-emoji,
+#tarteaucitronAlertBig .tarteaucitronEmoji {
+  display: none !important;
+}

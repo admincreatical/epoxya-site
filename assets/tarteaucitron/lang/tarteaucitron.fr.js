@@ -2,7 +2,7 @@
 /* min ready */
 tarteaucitron.lang = {
 
-    "middleBarHead": "☝️ 🍪",
+    "middleBarHead": "",
     "adblock": "Bonjour! Ce site joue la transparence et vous donne le choix des services tiers à activer.",
     "adblock_call": "Merci de désactiver votre adblocker pour commencer la personnalisation.",
     "reload": "Recharger la page",
@@ -11,7 +11,7 @@ tarteaucitron.lang = {
     "alertBigClick": "En poursuivant votre navigation,",
     "alertBig": "vous acceptez l'utilisation de services tiers pouvant installer des cookies",
     
-    "alertBigPrivacy": "Ce site utilise des cookies et vous donne le contrôle sur ceux que vous souhaitez activer",
+    "alertBigPrivacy": "Epoxya utilise des cookies pour mesurer l'audience du site et améliorer votre expérience. Vous gardez le contrôle sur ce que vous activez.",
     "alertSmall": "Gestion des services",
     "acceptAll": "Tout accepter",
     "personalize": "Personnaliser",
