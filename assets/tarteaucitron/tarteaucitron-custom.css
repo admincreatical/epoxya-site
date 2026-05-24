@@ -91,8 +91,13 @@ html body #tarteaucitronRoot div#tarteaucitronAlertBig {
   outline-offset: 2px !important;
 }
 
-/* Conteneur des boutons : alignement flex propre */
-#tarteaucitronAlertBig {
+/* Conteneur des boutons : alignement flex propre.
+   IMPORTANT — scopé à .tarteaucitronBeforeVisible (classe ajoutée par
+   openAlert et retirée par closeAlert) pour que `display: flex !important`
+   n'écrase PAS l'inline `display: none` que tarteaucitron pose à la
+   fermeture. Sans ce scope, la bannière reste visible après "Tout accepter"
+   et capte tous les clics au centre du viewport. */
+#tarteaucitronRoot.tarteaucitronBeforeVisible #tarteaucitronAlertBig {
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
@@ -103,7 +108,7 @@ html body #tarteaucitronRoot div#tarteaucitronAlertBig {
 }
 
 @media (min-width: 600px) {
-  #tarteaucitronAlertBig {
+  #tarteaucitronRoot.tarteaucitronBeforeVisible #tarteaucitronAlertBig {
     flex-direction: column !important;
   }
 }
