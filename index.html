@@ -456,6 +456,7 @@
       cursor: ew-resize; color: #fff; font-size: 1.2rem; z-index: 5;
       box-shadow: 0 4px 20px rgba(0,0,0,0.4);
       transition: box-shadow 0.2s;
+      touch-action: none;
     }
     .slider-handle:hover { box-shadow: 0 4px 30px rgba(0,0,0,0.6); border-color: #fff; }
     .slider-line {
@@ -2460,8 +2461,11 @@
       if (isDragging && activeSlider) updateSliderAtPos(activeSlider, e.clientX);
     });
     window.addEventListener('touchmove', (e) => {
-      if (isDragging && activeSlider) updateSliderAtPos(activeSlider, e.touches[0].clientX);
-    }, { passive: true });
+      if (isDragging && activeSlider) {
+        e.preventDefault();
+        updateSliderAtPos(activeSlider, e.touches[0].clientX);
+      }
+    }, { passive: false });
     window.addEventListener('mouseup', () => { isDragging = false; activeSlider = null; });
     window.addEventListener('touchend', () => { isDragging = false; activeSlider = null; });
 
